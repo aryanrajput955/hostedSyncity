@@ -315,12 +315,7 @@ export default function About() {
                 img: "/img/img.jpg",
                 bio: "The visionary who translates dreams into architectural realities."
               },
-              {
-                name: "Lakshya",
-                role: "Director of Operations",
-                img: "/img/lakshay.jpg",
-                bio: "The strategist ensuring flawless execution of every grand plan."
-              }
+          
             ].map((member, idx) => (
               <motion.div
                 key={idx}
