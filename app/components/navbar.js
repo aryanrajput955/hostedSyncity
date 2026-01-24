@@ -29,7 +29,7 @@ export default function Navbar() {
         {/* Logo - Left Side - Hidden on Mobile */}
         <Link
           href="/"
-          className="pointer-events-auto relative z-50 hidden md:block"
+          className="pointer-events-auto relative z-50 "
         >
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -41,7 +41,7 @@ export default function Navbar() {
               alt="Syncity"
               width={140}
               height={70}
-              className="w-24 md:w-32 h-auto object-contain"
+              className="w-16 md:w-26 h-auto object-contain"
               priority
             />
           </motion.div>
