@@ -169,11 +169,6 @@ export default function PortraitVideoSection() {
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10 transition-opacity duration-500 opacity-60 group-hover:opacity-80"></div>
 
                   {/* Play Icon Overlay */}
-                  <div className="absolute inset-0 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 scale-90 group-hover:scale-100">
-                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center">
-                      <Play className="w-5 h-5 text-white fill-white" />
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             ))}
