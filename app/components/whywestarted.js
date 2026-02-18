@@ -130,13 +130,13 @@ export function WhyWeStartedSection() {
           >
             <div className="relative">
               <Image
-                src="/img/4.png"
+                src="/whywe.png"
                 alt="Wedding Planning Journey"
-                width={600}
-                height={500}
-                className="rounded-none shadow-2xl object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                width={800}
+                height={800}
+                className="rounded-none w-full h-[20rem] md:h-[30rem] lg:h-[40rem] shadow-2xl object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+           
             </div>
 
             {/* Floating Elements */}

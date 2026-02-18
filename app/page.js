@@ -7,6 +7,7 @@ import WhyWeStartedSection from './components/whywestarted';
 import OneStationGallerySection from './components/onestation';
 import CustomLoader from './components/customloader';
 import VideoSection from './components/video';
+import EcoFriendlySection from './components/ecofriendly';
 
 const Page = () => {
   const [isPageLoading, setIsPageLoading] = useState(true);
@@ -28,6 +29,7 @@ const Page = () => {
   return (
     <>
       <HeroSection />
+      <EcoFriendlySection />
       <WhyWeStartedSection />
       <VideoSection />
       <OurVisionSection />
