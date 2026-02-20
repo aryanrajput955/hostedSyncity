@@ -139,12 +139,12 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="bg-primary/10 rounded-lg p-4">
+            <Link href="/contact#schedule-meeting" className="block bg-primary/10 rounded-lg p-4 hover:bg-primary/20 transition-colors cursor-pointer">
               <p className="text-sm font-medium mb-2">Free Consultation</p>
               <p className="text-primary/80 text-xs">
                 Schedule a free session to plan your dream event.
               </p>
-            </div>
+            </Link>
           </div>
         </div>
 
@@ -160,9 +160,9 @@ export default function Footer() {
               <Link href="/terms" className="text-primary/80 hover:text-primary transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/sitemap" className="text-primary/80 hover:text-primary transition-colors">
+              <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="text-primary/80 hover:text-primary transition-colors">
                 Sitemap
-              </Link>
+              </a>
             </div>
           </div>
         </div>
