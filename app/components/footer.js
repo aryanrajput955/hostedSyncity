@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <Image src="/logo2.png" alt="Syncity Logo" width={160} height={140} className="w-40 h-35" />
+              <Image src="/logo2.png" alt="Syncity Logo" width={260} height={240} className=" w-25 h-25 md:w-30 md:h-30" />
             </div>
             <p className="text-primary/80 leading-relaxed text-sm">
               Crafting unforgettable celebrations in Uttarakhand. We bring your dreams to life with precision and care.
