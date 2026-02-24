@@ -1,5 +1,5 @@
 import connectDB from '@/app/config/database';
-import Blog from '@/models/Blog';
+import Blog from '@/app/models/Blog';
 import BlogDetailsClient from './BlogDetailsClient';
 
 export async function generateMetadata({ params }) {

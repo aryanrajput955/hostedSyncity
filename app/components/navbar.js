@@ -17,7 +17,7 @@ export default function Navbar() {
   const toggleMenu = () => {
     // Only allow toggling on mobile (below md breakpoint which is usually 768px)
     if (window.innerWidth >= 768) return;
-    
+
     setIsOpen(!isOpen);
     // Also toggle hover state to ensuring logic doesn't conflict visually if needed
     // but usually independent is fine.
@@ -82,9 +82,8 @@ export default function Navbar() {
             animate={isHovered || isOpen ? "hover" : "rest"}
           >
             <div
-              className={`flex items-center gap-3 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full shadow-sm border border-primary/5 group transition-all duration-300 hover:shadow-md hover:bg-white ${
-                isOpen ? "bg-white shadow-md" : ""
-              }`}
+              className={`flex items-center gap-3 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full shadow-sm border border-primary/5 group transition-all duration-300 hover:shadow-md hover:bg-white ${isOpen ? "bg-white shadow-md" : ""
+                }`}
             >
               <span className="text-primary font-serif tracking-[0.2em] text-xs font-semibold hidden md:block group-hover:tracking-[0.3em] transition-all duration-500">
                 MENU
@@ -167,6 +166,8 @@ export default function Navbar() {
 
                     <div className="h-px bg-neutral-100 my-2 mx-2"></div>
 
+                    <NavLink href="/blogs" label="Blog" />
+
                     <NavLink href="/contact" label="Contact" isPrimary />
                   </div>
                 </div>
@@ -237,6 +238,12 @@ export default function Navbar() {
                 </div>
 
                 <MobileNavLink
+                  href="/blogs"
+                  label="Blog"
+                  onClick={() => setIsOpen(false)}
+                />
+
+                <MobileNavLink
                   href="/contact"
                   label="Contact"
                   onClick={() => setIsOpen(false)}
@@ -256,10 +263,9 @@ function NavLink({ href, label, isSub = false, isPrimary = false }) {
       <motion.div
         className={`
           relative flex items-center justify-between px-4 py-3 rounded-xl transition-colors duration-300
-          ${
-            isPrimary
-              ? "bg-primary text-white hover:bg-primary/90"
-              : "hover:bg-neutral-50 text-neutral-600 hover:text-primary"
+          ${isPrimary
+            ? "bg-primary text-white hover:bg-primary/90"
+            : "hover:bg-neutral-50 text-neutral-600 hover:text-primary"
           }
         `}
       >
@@ -286,11 +292,10 @@ function MobileNavLink({ href, label, isSub, onClick }) {
     <Link href={href} onClick={onClick} className="block w-full">
       <div
         className={`
-        ${
-          isSub
+        ${isSub
             ? "text-2xl text-neutral-500 font-light"
             : "text-4xl text-neutral-800 font-serif"
-        }
+          }
       `}
       >
         {label}

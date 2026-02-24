@@ -57,22 +57,25 @@ const BlogsClient = () => {
     }
 
     return (
-        <div className='min-h-screen bg-white pt-24'>
-            {/* Hero Section - Matching homepage style */}
+        <div className='min-h-screen bg-background '>
+            {/* Hero Section - Elevated premium style */}
             <section
-                className='relative min-h-[60vh] flex items-center justify-center bg-cover bg-center px-4 sm:px-6 md:px-8'
-                style={{ backgroundImage: "url('/img/shoot/pexels-quang-nguyen-vinh-2132174.jpeg')" }}>
-                {/* Dark overlay */}
-                <div className='absolute inset-0 bg-black/40 z-0'></div>
+                className='relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center bg-cover bg-center px-4 sm:px-6 md:px-8 overflow-hidden'
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')" }}>
+
+                {/* Sophisticated Dark Overlay matching main hero */}
+                <div className='absolute inset-0 z-0 bg-black/40'></div>
+                <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
 
                 {/* Content */}
-                <div className='relative z-10 text-center max-w-5xl mx-auto'>
-                    <h1
-                        style={{ fontFamily: 'salazur' }}
-                        className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 bg-gradient-to-r from-green-200 via-green-100 to-green-100 bg-clip-text text-transparent drop-shadow-2xl'>
+                <div className='relative z-10 text-center max-w-5xl mx-auto flex flex-col items-center'>
+                    <span className="mb-4 inline-block px-4 py-1.5 border border-white/30 rounded-full bg-black/20 backdrop-blur-sm text-white/90 text-[10px] md:text-xs font-medium tracking-[0.3em] uppercase">
+                        Discover The World
+                    </span>
+                    <h1 className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white leading-[1.1] mb-6 drop-shadow-2xl'>
                         Our Travel Blog
                     </h1>
-                    <p className='text-white/90 text-lg sm:text-xl md:text-2xl mb-8 drop-shadow-lg'>
+                    <p className='text-base md:text-xl text-white/80 font-light max-w-2xl mx-auto leading-relaxed drop-shadow-lg'>
                         Stories, Tips & Inspiration for Your Next Adventure
                     </p>
                 </div>
@@ -100,13 +103,13 @@ const BlogsClient = () => {
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                                 placeholder='Search blogs by title...'
-                                className='w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00453a]/20 focus:border-[#00453a] transition-all bg-white'
+                                className='w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all bg-white'
                             />
                         </div>
                         <div className='flex gap-3'>
                             <button
                                 type='submit'
-                                className='px-6 py-3 bg-[#00453a] text-white font-semibold rounded-xl hover:bg-[#003329] transition-all shadow-lg hover:shadow-xl'>
+                                className='px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl'>
                                 Search
                             </button>
                             <button
@@ -127,7 +130,7 @@ const BlogsClient = () => {
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20'>
                 {isLoading ? (
                     <div className='flex justify-center items-center py-20'>
-                        <div className='animate-spin rounded-full h-16 w-16 border-b-4 border-[#00453a]'></div>
+                        <div className='animate-spin rounded-full h-16 w-16 border-b-4 border-primary'></div>
                     </div>
                 ) : blogs.length === 0 ? (
                     <div className='text-center py-20'>
@@ -172,7 +175,7 @@ const BlogsClient = () => {
                                     <div className='flex items-center gap-4 text-sm text-gray-500 mb-3'>
                                         <div className='flex items-center gap-1.5'>
                                             <svg
-                                                className='w-4 h-4 text-[#00453a]'
+                                                className='w-4 h-4 text-primary'
                                                 fill='none'
                                                 stroke='currentColor'
                                                 viewBox='0 0 24 24'>
@@ -187,7 +190,7 @@ const BlogsClient = () => {
                                         </div>
                                         <div className='flex items-center gap-1.5'>
                                             <svg
-                                                className='w-4 h-4 text-[#00453a]'
+                                                className='w-4 h-4 text-primary'
                                                 fill='none'
                                                 stroke='currentColor'
                                                 viewBox='0 0 24 24'>
@@ -202,7 +205,7 @@ const BlogsClient = () => {
                                         </div>
                                     </div>
 
-                                    <h2 className='text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-[#00453a] transition-colors'>
+                                    <h2 className='text-xl font-bold text-foreground mb-3 line-clamp-2 group-hover:text-primary transition-colors'>
                                         {blog.title}
                                     </h2>
 
@@ -212,7 +215,7 @@ const BlogsClient = () => {
 
                                     <Link
                                         href={`/blogs/${blog._id}`}
-                                        className='inline-flex items-center gap-2 text-[#00453a] font-semibold hover:gap-3 transition-all group/link'>
+                                        className='inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group/link'>
                                         Read More
                                         <svg
                                             className='w-4 h-4 transition-transform'
