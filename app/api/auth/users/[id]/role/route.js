@@ -1,5 +1,5 @@
 import connectDB from '@/app/config/database';
-import User from '@/models/User';
+import User from '@/app/models/User';
 import { NextResponse } from 'next/server';
 import { isAuthenticated, isAdmin } from '@/app/utils/auth';
 
