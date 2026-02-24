@@ -8,13 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
+    "aws-sdk": "^2.1693.0",
+    "axios": "^1.13.5",
+    "bcryptjs": "^3.0.3",
     "framer-motion": "^12.23.12",
     "googleapis": "^171.4.0",
+    "jsonwebtoken": "^9.0.3",
     "lucide-react": "^0.541.0",
+    "mongoose": "^9.2.2",
     "next": "^15.5.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-quill-new": "^3.8.3",
     "react-slick": "^0.31.0",
+    "react-toastify": "^11.0.5",
     "resend": "^6.9.2",
     "slick-carousel": "^1.8.1"
   },
