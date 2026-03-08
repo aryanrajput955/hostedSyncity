@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image";
+import { CloudinaryImage } from "./CloudinaryMedia";
 import { ArrowRight, Star } from "lucide-react";
 
 export default function CTASection() {
@@ -18,10 +18,11 @@ export default function CTASection() {
     <section ref={ref} className="relative py-24 md:py-32 overflow-hidden bg-primary">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-20">
-        <Image
-          src="/bg3.jpg"
+        <CloudinaryImage
+          src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971372/bg3_phy7xs.jpg"
           alt="Luxury Event Background"
           fill
+          priority={false}
           className="object-cover"
         />
         <div className="absolute inset-0 bg-primary/90 mix-blend-multiply"></div>

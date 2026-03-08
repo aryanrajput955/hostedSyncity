@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
+import { CloudinaryImage } from "./CloudinaryMedia";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Heart, Calendar, Users, MapPin, Star } from "lucide-react";
 
@@ -34,11 +34,12 @@ export default function OurVisionSection() {
             className="relative"
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/img/1.png"
-                alt="Event planning"
+              <CloudinaryImage
+                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968097/sy1_m5re6n.webp"
+                alt="crafting your vision"
                 width={600}
                 height={800}
+                priority={false}
                 className="object-cover w-full h-[500px]"
               />
             </div>

@@ -1,8 +1,8 @@
-import Image from "next/image";
+import { CloudinaryImage } from "./CloudinaryMedia";
 import Link from "next/link";
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion} from "framer-motion";
+
 
 // Combined Sections with Smooth Background
 export default function CombinedSections() {
@@ -10,10 +10,11 @@ export default function CombinedSections() {
     <div className="relative">
       {/* Static Smooth Background */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/bg2.png"
+        <CloudinaryImage
+          src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971373/bg2_op6hig.png"
           alt="Background"
           fill
+          priority={true}
           className="object-cover opacity-15"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/25 via-background/15 to-accent/30"></div>
@@ -129,11 +130,12 @@ export function WhyWeStartedSection() {
             className="relative lg:order-1"
           >
             <div className="relative">
-              <Image
-                src="/whywe.png"
+              <CloudinaryImage
+                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971397/whywe_telg2l.png"
                 alt="Wedding Planning Journey"
                 width={800}
                 height={800}
+                priority={true}
                 className="rounded-none w-full h-[20rem] md:h-[30rem] lg:h-[40rem] shadow-2xl object-cover"
               />
            
@@ -156,21 +158,21 @@ export function ServicesPreviewSection() {
   const services = [
     {
       id: "01",
-      image: "/elegant-destination-wedding-in-uttarakhand-mountai.png",
+      image: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy4_uca7qn.webp",
       title: "Destination Weddings",
       description: "Exchange vows amidst the majestic peaks. We curate intimate ceremonies and grand celebrations in Uttarakhand's most breathtaking locations.",
       features: ["Mountain Venues", "Luxury Decor", "Full Coordination"]
     },
     {
       id: "02",
-      image: "/img/img2.png",
+      image: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968095/sy9_iyskdz.jpg",
       title: "Corporate Events",
       description: "Elevate your business gatherings. From executive retreats to large-scale conferences, we engage your team in an inspiring mountain setting.",
       features: ["Team Building", "Executive Retreats", "Seminars"]
     },
     {
       id: "03",
-      image: "/peaceful-farm-stay-in-uttarakhand-with-mountain-vi.png",
+      image: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971066/sy12_qcl3ym.avif",
       title: "Farm Tourism",
       description: "Reconnect with nature. Experience the authentic rural charm of Devbhoomi with curated farm stays, traditional cuisine, and local culture.",
       features: ["Village Tours", "Organic Dining", "Cultural Immersion"]
@@ -212,7 +214,7 @@ export function ServicesPreviewSection() {
               className="group relative h-[500px] bg-white shadow-xl hover:shadow-2xl transition-all duration-500 rounded-none overflow-hidden cursor-pointer"
             >
               {/* Background Image */}
-              <Image
+              <CloudinaryImage
                 src={service.image}
                 alt={service.title}
                 fill

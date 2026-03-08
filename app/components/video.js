@@ -4,28 +4,25 @@ import { motion } from "framer-motion";
 import { Play, Star } from "lucide-react";
 import Slider from "react-slick";
 import { useState, useEffect } from "react";
+import { CloudinaryVideo } from "./CloudinaryMedia";
 
 // Video data
 const videos = [
   {
-    src: "/img/2.mp4",
-    poster: "/wedding-moment-1-poster.png",
+    src: "https://res.cloudinary.com/dhlvq35cc/video/upload/v1772971434/6_ikweeb.mp4", // Replace with your actual Cloudinary public IDs
     alt: "Wedding Ceremony Highlight"
   },
   {
-    src: "/img/6.mp4",
-    poster: "/wedding-moment-2-poster.png",
-    alt: "Reception Dance Moment"
+    src: "https://res.cloudinary.com/dhlvq35cc/video/upload/v1772971429/2_iuiq9z.mp4",
+    alt: "Destination Wedding"
   },
   {
-    src: "/img/3.mp4",
-    poster: "/wedding-moment-3-poster.png",
+    src: "https://res.cloudinary.com/dhlvq35cc/video/upload/v1772971432/3_gwojfc.mp4",
     alt: "Cultural Celebration"
   },
   {
-    src: "/img/5.mp4",
-    poster: "/wedding-moment-4-poster.png",
-    alt: "Scenic Venue Setup"
+    src: "https://res.cloudinary.com/dhlvq35cc/video/upload/v1772971434/4_ehtklp.mp4",
+    alt: "Farm Tourism"
   }
 ];
 
@@ -61,7 +58,7 @@ export default function PortraitVideoSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#5e0000] to-black/40 opacity-90"></div>
 
       {/* Texture Overlay */}
-      <div className="absolute inset-0 opacity-10 bg-[url('/bg2.png')] bg-repeat mix-blend-overlay"></div>
+      <div className="absolute inset-0 opacity-10 bg-[url('https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971373/bg2_op6hig.png')] bg-repeat mix-blend-overlay"></div>
 
       {/* Floating Particles */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -120,16 +117,15 @@ export default function PortraitVideoSection() {
               {videos.map((video, i) => (
                 <div key={i} className="px-4 py-4">
                   <div className="relative aspect-[9/16] rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl">
-                    <video
+                    <CloudinaryVideo
+                      src={video.src}
+                      width="1080"
+                      height="1920"
                       className="w-full h-full object-cover"
-                      poster={video.poster}
                       autoPlay
                       muted
                       loop
-                      playsInline
-                    >
-                      <source src={video.src} type="video/mp4" />
-                    </video>
+                    />
                     {/* Gloss Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
                   </div>
@@ -154,21 +150,18 @@ export default function PortraitVideoSection() {
                   {/* Decorative Border */}
                   <div className="absolute inset-0 border border-white/10 z-20 transition-colors duration-500 group-hover:border-[#E5E4E2]/40"></div>
 
-                  <video
+                  <CloudinaryVideo
+                    src={video.src}
+                    width="1080"
+                    height="1920"
                     className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700"
-                    poster={video.poster}
                     autoPlay
                     muted
                     loop
-                    playsInline
-                  >
-                    <source src={video.src} type="video/mp4" />
-                  </video>
+                  />
 
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10 transition-opacity duration-500 opacity-60 group-hover:opacity-80"></div>
-
-                  {/* Play Icon Overlay */}
                 </div>
               </motion.div>
             ))}

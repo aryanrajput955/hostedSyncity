@@ -1,7 +1,7 @@
 ﻿'use client';
 import { useState, useEffect } from 'react';
 import { ChevronDown, Star, MapPin, Calendar, Users, Award, Gift, Home, Sprout, Sun, Briefcase, Mic, Coffee, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import { CloudinaryImage } from '../components/CloudinaryMedia';
 import Link from 'next/link';
 
 function Card({ className = "", children, variant = "default", ...props }) {
@@ -240,17 +240,18 @@ export default function Services() {
 
               <div className="grid grid-cols-2 gap-4 relative z-10 w-full">
                 {[
-                  { title: 'Farm Stay', subtitle: 'MOUNTAIN VIEW', image: '/peaceful-farm-stay-in-uttarakhand-with-mountain-vi.png', height: 'h-64 translate-y-8' },
-                  { title: 'Organic Farm', subtitle: 'RURAL CHARM', image: '/farm.png', height: 'h-80' },
-                  { title: 'Nature Trail', subtitle: 'SCENIC BEAUTY', image: '/trial.png', height: 'h-80 -translate-y-8' },
-                  { title: 'Wellness', subtitle: 'SERENITY', image: '/wellness.jpg', height: 'h-64' }
+                  { title: 'Farm Stay', subtitle: 'MOUNTAIN VIEW', image: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971066/sy13_zmx8mz.webp', height: 'h-64 translate-y-8' },
+                  { title: 'Organic Farm', subtitle: 'RURAL CHARM', image: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971068/sy14_qy4ji2.jpg', height: 'h-80' },
+                  { title: 'Nature Trail', subtitle: 'SCENIC BEAUTY', image: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971066/sy11_rgxixe.jpg', height: 'h-80 -translate-y-8' },
+                  { title: 'Wellness', subtitle: 'SERENITY', image: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy6_dk2k8m.webp', height: 'h-64' }
                 ].map((item, idx) => (
                   <div key={idx} className={`relative group ${item.height} overflow-hidden rounded-2xl shadow-xl`}>
-                    <Image
+                    <CloudinaryImage
                       src={item.image}
                       alt={item.title}
                       width={300}
                       height={400}
+                      priority={idx < 2}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -313,13 +314,13 @@ export default function Services() {
             {/* Visual Side (Left) - 4 Image Grid */}
             <div className={`grid grid-cols-2 gap-4 transition-all duration-1000 delay-300 ${isVisible['corporate-events-detail'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               {[
-                { title: 'Team Building', subtitle: 'COLLABORATION', src: '/teambuilding.png' },
-                { title: 'Conf. Setup', subtitle: 'PROFESSIONAL', src: '/conference.jpg' },
-                { title: 'Luxury Stay', subtitle: 'EXECUTIVE SUITES', src: '/venues.jpg' },
-                { title: 'Gala Dinner', subtitle: 'NETWORKING', src: '/stress.jpg' }
+                { title: 'Team Building', subtitle: 'COLLABORATION', src: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772978799/team_w5gj3y.png' },
+                { title: 'Conf. Setup', subtitle: 'PROFESSIONAL', src: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971373/conference_u9q3dq.jpg' },
+                { title: 'Luxury Stay', subtitle: 'EXECUTIVE SUITES', src: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772979149/aloha_a8hjaz.webp' },
+                { title: 'Gala Dinner', subtitle: 'NETWORKING', src: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy8_riiah7.jpg' }
               ].map((img, idx) => (
                 <div key={idx} className={`relative overflow-hidden shadow-lg group rounded-xl ${idx % 2 === 1 ? 'mt-8' : ''} h-64`}>
-                  <Image
+                  <CloudinaryImage
                     src={img.src}
                     alt={img.title}
                     width={300}
@@ -367,23 +368,23 @@ export default function Services() {
                 title: 'Heritage Venues',
                 subtitle: 'ROYAL ELEGANCE',
                 desc: 'Centuries-old forts and palaces tailored for your grand union.',
-                image: '/scenic-mountain-wedding-venue-with-traditional-dec.png'
+                image: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy6_dk2k8m.webp'
               },
               {
                 title: 'Bespoke Themes',
                 subtitle: 'YOUR SIGANTURE',
                 desc: 'From Bohemian chic to traditional grandeur, we craft your vision.',
-                image: '/bg3.jpg'
+                image: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772979665/heritage_hdo4yj.jpg'
               },
               {
                 title: 'Planning',
                 subtitle: 'FLAWLESS EXECUTION',
                 desc: 'Meticulous coordination for a stress-free celebration.',
-                image: '/elegant-catering-setup-with-traditional-uttarakhan.png'
+                image: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971427/img2_fenltx.png'
               }
             ].map((item, idx) => (
               <div key={idx} className={`relative group h-[500px] overflow-hidden rounded-2xl shadow-2xl ${idx === 1 ? 'lg:-translate-y-8' : ''}`}>
-                <Image
+                <CloudinaryImage
                   src={item.image}
                   alt={item.title}
                   width={400}
@@ -513,7 +514,7 @@ export default function Services() {
             <div className={`relative h-[600px] transition-all duration-1000 delay-300 ${isVisible['birthday-parties-detail'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               {/* Main Large Image */}
               <div className="absolute top-0 right-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-2xl z-10 border-4 border-white">
-                <Image
+                <CloudinaryImage
                   src="/beautiful-event-decoration-with-flowers-and-mounta.png"
                   alt="Birthday Decoration"
                   width={500}
@@ -527,7 +528,7 @@ export default function Services() {
 
               {/* Secondary Image - Bottom Left */}
               <div className="absolute bottom-0 left-4 w-1/2 h-1/2 rounded-2xl overflow-hidden shadow-2xl z-20 border-4 border-white">
-                <Image
+                <CloudinaryImage
                   src="/bday.png"
                   alt="Birthday Cake"
                   width={300}
@@ -538,7 +539,7 @@ export default function Services() {
 
               {/* Accent Image - Floating Top */}
               <div className="absolute top-10 left-0 w-1/3 h-1/4 rounded-xl overflow-hidden shadow-xl z-30 border-2 border-white -rotate-6 hover:rotate-0 transition-transform duration-500">
-                <Image
+                <CloudinaryImage
                   src="/hamper.png"
                   alt="Gifts"
                   width={200}
@@ -631,7 +632,7 @@ export default function Services() {
                 {/* The Grand Arch Frame */}
                 <div className="absolute inset-0 rounded-t-[300px] border border-white/20 z-20 m-4"></div>
                 <div className="absolute inset-0 rounded-t-[300px] overflow-hidden z-10 shadow-2xl">
-                  <Image
+                  <CloudinaryImage
                     src="/hamper.png"
                     alt="Luxury Return Gifts"
                     fill

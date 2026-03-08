@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Leaf, HeartHandshake, Recycle, Utensils, Flower2, Globe, CheckCircle2, Sparkles } from 'lucide-react';
-import Image from 'next/image';
+import { CloudinaryImage } from './CloudinaryMedia';
 
 /* ─── Animated Counter ─────────────────────────────────────────────────── */
 const Counter = ({ target, suffix = '' }) => {
@@ -47,14 +47,6 @@ const EcoFriendlySection = () => {
       {/* ── Hero Banner ─────────────────────────────────────────────────── */}
       <div className="relative py-20 bg-[var(--royal-maroon)] overflow-hidden">
         {/* Background Pattern/Image Overlay */}
-        <div className="absolute inset-0 opacity-10">
-            <Image 
-              src="/assets/bg2.png" 
-              alt="Pattern Background" 
-              fill
-              className="object-cover"
-            />
-        </div>
         
         <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[var(--luxe-gold)]/10 blur-3xl" />
         <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-[var(--rich-burgundy)]/40 blur-3xl" />
@@ -107,7 +99,7 @@ const EcoFriendlySection = () => {
       </div>
 
       {/* ── Visual Feature Section 1: Eco Decor ─────────────────────────── */}
-      <div className="py-20 md:py-28 container mx-auto px-4 md:px-8">
+      <div className="py-10 md:py-22 container mx-auto px-4 md:px-16">
         {/* Section label */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -130,10 +122,11 @@ const EcoFriendlySection = () => {
             transition={{ duration: 0.8 }}
             className="relative w-full aspect-[3/4] sm:aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden group"
           >
-            <Image
-              src="/mandap.png"
-              alt="Sustainable Indian Wedding Mandap"
+            <CloudinaryImage
+              src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772976156/image7_tel20a.webp"
+              alt="Sustainable Indian Wedding Decor"
               fill
+              priority
               className="object-cover transition-transform duration-1000 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[var(--royal-maroon)]/90 via-[var(--royal-maroon)]/50 to-transparent" />
@@ -188,9 +181,6 @@ const EcoFriendlySection = () => {
       {/* ── Visual Feature Section 2: Food Donation ─────────────────────── */}
       <div className="relative py-20 md:py-28 bg-[var(--light-cream)] overflow-hidden">
         {/* Subtle background texture */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <Image src="/assets/bg2.png" alt="" fill className="object-cover" />
-        </div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[var(--luxe-gold)]/10 blur-[100px]" />
 
         <div className="relative container mx-auto px-4 md:px-8 z-10">
@@ -255,8 +245,8 @@ const EcoFriendlySection = () => {
               className="lg:col-span-7 order-1 lg:order-2 relative"
             >
               <div className="relative aspect-[4/5] md:aspect-[4/3] rounded-3xl overflow-hidden group">
-                <Image
-                  src="/img.png"
+                <CloudinaryImage
+                  src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772975116/sy15_an2xaw.jpg"
                   alt="Food Distribution to Community"
                   fill
                   className="object-cover transition-transform duration-1000 group-hover:scale-105"

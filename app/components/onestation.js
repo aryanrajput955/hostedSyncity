@@ -54,7 +54,7 @@ export default function OneStationGallerySection() {
 
           <div className="relative group overflow-hidden rounded-xl shadow-lg">
             <Image
-              src="/farm-tourism-experience-with-traditional-activitie.png"
+              src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971066/sy12_qcl3ym.avif"
               alt="Farm Tourism"
               width={300}
               height={200}
