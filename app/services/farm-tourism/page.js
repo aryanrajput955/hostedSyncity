@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { MapPin, Wind, Sun, Coffee, ArrowRight, Star, Leaf, Mountain, Heart } from 'lucide-react'; // Added Heart here
-import Image from 'next/image';
+import { CloudinaryImage } from '../../components/CloudinaryMedia';
 import Link from 'next/link';
 
 function Button({ className = "", children, variant = "primary", ...props }) {
@@ -56,12 +56,12 @@ export default function FarmTourismPage() {
         <div className="min-h-screen bg-[#FBFBFB]">
             {/* Hero Section */}
             <section id="hero" className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-                <Image
-                    src="/farm-tourism-experience-with-traditional-activitie.png"
+                <CloudinaryImage
+                    src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1773026040/pexels-tomfisk-1081912_ch40he.jpg"
                     alt="Farm Tourism"
                     fill
                     className="object-cover"
-                    priority
+                    priority={true}
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
 
@@ -75,10 +75,12 @@ export default function FarmTourismPage() {
                         Escape the city chaos and immerse yourself in the serenity of nature. Experience the perfect blend of rustic charm and modern luxury.
                     </p>
                     <div className={`flex gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                        <Button className="!bg-[#E5E4E2] !text-primary hover:!bg-white">
-                            Explore Packages
-                        </Button>
-                        <a href="https://www.ancienthealth.org" target="_blank" rel="noopener noreferrer">
+                        <Link href="/contact">
+                            <Button className="!bg-[#E5E4E2] !text-primary hover:!bg-white">
+                                Contact Us
+                            </Button>
+                        </Link>
+                        <a href="https://www.ancienthealth.in" target="_blank" rel="noopener noreferrer">
                             <Button variant="secondary">
                                 Visit Online Store
                             </Button>
@@ -92,10 +94,11 @@ export default function FarmTourismPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
                         <div className={`relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['luxury-stays'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                            <Image
-                                src="/peaceful-farm-stay-in-uttarakhand-with-mountain-vi.png"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy6_dk2k8m.webp"
                                 alt="Luxury Farm Stay"
                                 fill
+                                priority={true}
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -164,8 +167,8 @@ export default function FarmTourismPage() {
                         </div>
 
                         <div className={`order-1 lg:order-2 relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['organic-tours'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                            <Image
-                                src="/farm.png"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1773026038/pexels-gokul-mohan-3043412-11011198_gsaiwd.jpg"
                                 alt="Organic Farming"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -180,8 +183,8 @@ export default function FarmTourismPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
                         <div className={`relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['adventure'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                            <Image
-                                src="/trial.png"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy10_wmvbab.avif"
                                 alt="Nature Trails"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -260,8 +263,8 @@ export default function FarmTourismPage() {
                         </div>
 
                         <div className={`order-1 lg:order-2 relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['wellness'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                            <Image
-                                src="/wellness.jpg"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968095/sy5_vtqmyu.webp"
                                 alt="Wellness Retreat"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"

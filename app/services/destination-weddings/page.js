@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Heart, Music, Camera, Sparkles, MapPin, Calendar, Gift, Star } from 'lucide-react';
-import Image from 'next/image';
+import { CloudinaryImage } from '../../components/CloudinaryMedia';
 import Link from 'next/link';
 
 function Button({ className = "", children, variant = "primary", ...props }) {
@@ -56,12 +56,12 @@ export default function DestinationWeddingsPage() {
         <div className="min-h-screen bg-[#FBFBFB]">
             {/* Hero Section */}
             <section id="hero" className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-                <Image
-                    src="/scenic-mountain-wedding-venue-with-traditional-dec.png"
+                <CloudinaryImage
+                    src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy4_uca7qn.webp"
                     alt="Destination Wedding"
                     fill
                     className="object-cover"
-                    priority
+                    priority={true}
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
 
@@ -75,9 +75,11 @@ export default function DestinationWeddingsPage() {
                         Say "I Do" against the breathtaking backdrop of majestic mountains. We craft timeless celebrations that reflect your unique love story.
                     </p>
                     <div className={`transition-all duration-1000 delay-500 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                        <Link href="/contact">
                         <Button className="!bg-[#E5E4E2] !text-primary hover:!bg-white">
                             Plan Your Big Day
                         </Button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -87,8 +89,8 @@ export default function DestinationWeddingsPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
                         <div className={`relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['luxury-venues'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                            <Image
-                                src="/elegant-destination-wedding-in-uttarakhand-mountai.png"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971408/WhatsApp_Image_2025-09-22_at_13.58.24_26b918e4_mppxz9.jpg"
                                 alt="Luxury Venue"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -158,8 +160,8 @@ export default function DestinationWeddingsPage() {
                         </div>
 
                         <div className={`order-1 lg:order-2 relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['bespoke-themes'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                            <Image
-                                src="/bohemian-wedding-theme-with-mountain-backdrop.png"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968097/sy3_bx5rm1.webp"
                                 alt="Wedding Decor"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -174,8 +176,8 @@ export default function DestinationWeddingsPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
                         <div className={`relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['planning'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                            <Image
-                                src="/professional-indian-woman-event-planner-smiling.png"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971427/img2_fenltx.png"
                                 alt="Wedding Planner"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -251,8 +253,8 @@ export default function DestinationWeddingsPage() {
                         </div>
 
                         <div className={`order-1 lg:order-2 relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['rituals'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                            <Image
-                                src="/traditional-indian-pre-wedding-ceremony-mehendi.png"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1773032155/pexels-aalap-creation-2158557916-35457632_tfhhh5.jpg"
                                 alt="Traditional Ceremony"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"

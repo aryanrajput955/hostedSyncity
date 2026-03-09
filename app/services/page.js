@@ -515,7 +515,7 @@ export default function Services() {
               {/* Main Large Image */}
               <div className="absolute top-0 right-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-2xl z-10 border-4 border-white">
                 <CloudinaryImage
-                  src="/beautiful-event-decoration-with-flowers-and-mounta.png"
+                  src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1773023481/decor_ve1ti4.jpg"
                   alt="Birthday Decoration"
                   width={500}
                   height={600}
@@ -529,7 +529,7 @@ export default function Services() {
               {/* Secondary Image - Bottom Left */}
               <div className="absolute bottom-0 left-4 w-1/2 h-1/2 rounded-2xl overflow-hidden shadow-2xl z-20 border-4 border-white">
                 <CloudinaryImage
-                  src="/bday.png"
+                  src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971428/bday_n41xsj.png"
                   alt="Birthday Cake"
                   width={300}
                   height={300}
@@ -540,7 +540,7 @@ export default function Services() {
               {/* Accent Image - Floating Top */}
               <div className="absolute top-10 left-0 w-1/3 h-1/4 rounded-xl overflow-hidden shadow-xl z-30 border-2 border-white -rotate-6 hover:rotate-0 transition-transform duration-500">
                 <CloudinaryImage
-                  src="/hamper.png"
+                  src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971380/hamper_apt10g.png"
                   alt="Gifts"
                   width={200}
                   height={200}
@@ -633,7 +633,7 @@ export default function Services() {
                 <div className="absolute inset-0 rounded-t-[300px] border border-white/20 z-20 m-4"></div>
                 <div className="absolute inset-0 rounded-t-[300px] overflow-hidden z-10 shadow-2xl">
                   <CloudinaryImage
-                    src="/hamper.png"
+                    src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971380/hamper_apt10g.png"
                     alt="Luxury Return Gifts"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-[2s]"

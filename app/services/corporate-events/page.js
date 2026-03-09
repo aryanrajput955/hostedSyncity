@@ -1,8 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Users, Briefcase, Mic, Coffee, Target, Award, Zap, Brain, Rocket, Globe } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { CloudinaryImage } from '../../components/CloudinaryMedia';
+import Link from 'next/link'; 
 
 function Button({ className = "", children, variant = "primary", ...props }) {
     const variants = {
@@ -56,12 +56,12 @@ export default function CorporateEventsPage() {
         <div className="min-h-screen bg-[#FBFBFB]">
             {/* Hero Section */}
             <section id="hero" className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-                <Image
-                    src="/venues.jpg"
+                <CloudinaryImage
+                    src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772979149/aloha_a8hjaz.webp"
                     alt="Corporate Events & Retreats"
                     fill
                     className="object-cover"
-                    priority
+                    priority={true}
                 />
                 <div className="absolute inset-0 bg-black/50"></div>
 
@@ -75,9 +75,11 @@ export default function CorporateEventsPage() {
                         From high-stakes board meetings to large-scale conferences, we provide the perfect environment for focus, innovation, and corporate excellence.
                     </p>
                     <div className={`transition-all duration-1000 delay-500 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                        <Button className="!bg-[#E5E4E2] !text-primary hover:!bg-white">
-                            Plan Your Event
-                        </Button>
+                        <Link href="/contact">
+                            <Button className="!bg-[#E5E4E2] !text-primary hover:!bg-white">
+                                Contact Us
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -87,8 +89,8 @@ export default function CorporateEventsPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
                         <div className={`relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['team-building'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                            <Image
-                                src="/teambuilding.png"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772978799/team_w5gj3y.png"
                                 alt="Team Building"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -158,8 +160,8 @@ export default function CorporateEventsPage() {
                         </div>
 
                         <div className={`order-1 lg:order-2 relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['conferences'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                            <Image
-                                src="/conference.jpg"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971373/conference_u9q3dq.jpg"
                                 alt="Conference Hall"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -174,8 +176,8 @@ export default function CorporateEventsPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
                         <div className={`relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['stress-relief'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                            <Image
-                                src="/stress.jpg"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971420/stress_xgu5yd.jpg"
                                 alt="Stress Relief"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -251,8 +253,8 @@ export default function CorporateEventsPage() {
                         </div>
 
                         <div className={`order-1 lg:order-2 relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['executive'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                            <Image
-                                src="/venues.jpg"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy8_riiah7.jpg"
                                 alt="Executive Lounge"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
