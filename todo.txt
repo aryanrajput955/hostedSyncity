@@ -1,7 +1,0 @@
-in the services dropdown, these should be these 5 options:
-1 - Wellness retreats
-2 - Destination weddings.
-3 - Corporate Retreat and Events.
-4 - Ancient Health -> Farm Tourism
-5 - Any Special Occasion.
-
