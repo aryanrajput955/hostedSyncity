@@ -28,10 +28,10 @@ const Page = () => {
 
   return (
     <>
-      <HeroSection />
+      <VideoSection />
+      {/* <HeroSection /> */}
       <EcoFriendlySection />
       <WhyWeStartedSection />
-      <VideoSection />
       <OurVisionSection />
       {/* <OneStationGallerySection /> */}
       <CTASection />

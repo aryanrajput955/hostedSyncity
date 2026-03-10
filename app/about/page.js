@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
+import { CloudinaryImage } from "../components/CloudinaryMedia";
 import { Card, CardContent } from "../components/ui/cards";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -93,12 +93,12 @@ export default function About() {
 
                 {/* Inner Image Container */}
                 <div className="relative h-full w-full rounded-t-[280px] rounded-b-[10px] overflow-hidden">
-                  <Image
-                    src="/elegant-destination-wedding-in-uttarakhand-mountai.png"
+                  <CloudinaryImage
+                    src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1773124331/global-wedding_t031jt.jpg"
                     alt="Scenic Mountain Wedding"
                     fill
                     className="object-cover transition-transform duration-[2s] ease-in-out group-hover:scale-110"
-                    priority
+                    priority={true}
                   />
                   {/* Subtle Overlay */}
                   <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-700"></div>
@@ -141,8 +141,8 @@ export default function About() {
                 <div className="absolute inset-2 border border-primary/5 rounded-t-[190px] border-b-0 pointer-events-none"></div>
 
                 <div className="relative overflow-hidden rounded-t-[180px] h-[500px] w-full shadow-2xl">
-                  <Image
-                    src="/happy-couple-celebrating-successful-wedding-in-mou.png"
+                  <CloudinaryImage
+                    src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772992384/manik_ueooni.jpg"
                     alt="Syncity Founders"
                     fill
                     className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
@@ -312,8 +312,14 @@ export default function About() {
               {
                 name: "Manik",
                 role: "Founder & Lead Planner",
-                img: "/img/img.jpg",
+                img: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772992384/manik_ueooni.jpg",
                 bio: "The visionary who translates dreams into architectural realities."
+              },
+              {
+                name: "Lakshay",
+                role: "Co-Founder & Creative Director",
+                img: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772991413/lakshay_m6dnnh.png",
+                bio: "The creative mind behind our signature aesthetic and immersive experiences."
               },
           
             ].map((member, idx) => (
@@ -328,7 +334,7 @@ export default function About() {
                 <div className="relative p-3 border border-[#E5E4E2] bg-white shadow-xl rotate-0 group-hover:rotate-1 transition-transform duration-500">
                   <div className="absolute inset-[4px] border border-primary/10 pointer-events-none"></div>
                   <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-100 grayscale group-hover:grayscale-0 transition-all duration-700">
-                    <Image
+                    <CloudinaryImage
                       src={member.img}
                       alt={member.name}
                       fill

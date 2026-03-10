@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Leaf, Sun, Wind, Droplet, Sparkles, Heart, Mountain, Coffee } from 'lucide-react';
-import Image from 'next/image';
+import { CloudinaryImage } from '../../components/CloudinaryMedia';
 import Link from 'next/link';
 
 function Button({ className = "", children, variant = "primary", ...props }) {
@@ -56,8 +56,8 @@ export default function WellnessRetreatPage() {
         <div className="min-h-screen bg-[#FBFBFB]">
             {/* Hero Section */}
             <section id="hero" className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-                <Image
-                    src="/wellness.jpg"
+                <CloudinaryImage
+                    src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1773057807/vantage-point-photographers-LE-U3PqquEg-unsplash_ckmbyd.jpg"
                     alt="Wellness Retreat"
                     fill
                     className="object-cover"
@@ -80,9 +80,6 @@ export default function WellnessRetreatPage() {
                                 Book Your Retreat
                             </Button>
                         </Link>
-                        <Button variant="secondary">
-                            View Programs
-                        </Button>
                     </div>
                 </div>
             </section>
@@ -92,8 +89,8 @@ export default function WellnessRetreatPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
                         <div className={`relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['yoga-meditation'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                            <Image
-                                src="/wellness.jpg"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy7_nmnkxu.avif"
                                 alt="Yoga & Meditation"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -163,8 +160,8 @@ export default function WellnessRetreatPage() {
                         </div>
 
                         <div className={`order-1 lg:order-2 relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['ayurvedic-spa'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                            <Image
-                                src="/wellness.jpg"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971420/stress_xgu5yd.jpg"
                                 alt="Ayurvedic Spa"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -179,8 +176,8 @@ export default function WellnessRetreatPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
                         <div className={`relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['nutrition'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                            <Image
-                                src="/farm.png"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1773063636/3254-1_fejtrp.webp"
                                 alt="Organic Cuisine"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -256,8 +253,8 @@ export default function WellnessRetreatPage() {
                         </div>
 
                         <div className={`order-1 lg:order-2 relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['nature-immersion'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                            <Image
-                                src="/trial.png"
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy10_wmvbab.avif"
                                 alt="Nature Immersion"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"

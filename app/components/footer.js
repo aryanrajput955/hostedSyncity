@@ -45,33 +45,28 @@ export default function Footer() {
             <h4 className="text-xl font-bold">Our Services</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/services" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/services/destination-weddings" className="text-primary/80 hover:text-primary transition-colors">
                   Destination Weddings
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/services/corporate-events" className="text-primary/80 hover:text-primary transition-colors">
                   Corporate Events & Retreats
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/services/farm-tourism" className="text-primary/80 hover:text-primary transition-colors">
                   Farm Tourism
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-primary/80 hover:text-primary transition-colors">
-                  Cultural Celebrations
+                <Link href="/services/wellness-retreat" className="text-primary/80 hover:text-primary transition-colors">
+                  Wellness Retreats
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-primary/80 hover:text-primary transition-colors">
-                  Team Building
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-primary/80 hover:text-primary transition-colors">
-                  Private Parties
+                <Link href="/services/special-occasions" className="text-primary/80 hover:text-primary transition-colors">
+                  Special Occasions
                 </Link>
               </li>
             </ul>

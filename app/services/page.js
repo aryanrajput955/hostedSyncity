@@ -1,8 +1,9 @@
 ﻿'use client';
-import { useState, useEffect } from 'react';
-import { ChevronDown, Star, MapPin, Calendar, Users, Award, Gift, Home, Sprout, Sun, Briefcase, Mic, Coffee, ArrowRight } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { ChevronDown, Star, MapPin, Calendar, Users, Award, Gift, Home, Sprout, Sun, Briefcase, Mic, Coffee, ArrowRight, ChevronLeft, ChevronRight, Heart } from 'lucide-react';
 import { CloudinaryImage } from '../components/CloudinaryMedia';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function Card({ className = "", children, variant = "default", ...props }) {
   const variants = {
@@ -83,34 +84,64 @@ export default function Services() {
     return () => observer.disconnect();
   }, []);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setCardsToShow(4);
+      else if (window.innerWidth >= 768) setCardsToShow(2);
+      else setCardsToShow(1);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => Math.min(prev + 1, services.length - cardsToShow));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => Math.max(prev - 1, 0));
+  };
+
   const services = [
     {
       id: 'farm-tourism',
       title: 'Farm Tourism',
-      icon: '🌾',
+      iconImage: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1773056864/ChatGPT_Image_Mar_9_2026_11_24_35_AM_leuwhi.png',
       description: 'Immersive agricultural experiences in pristine natural settings',
       features: ['Luxury Farm Stays', 'Organic Farm Tours', 'Adventure Activities', 'Wellness Retreats']
     },
     {
       id: 'corporate-events',
       title: 'Corporate Events & Retreats',
-      icon: '🏢',
+      iconImage: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1773034933/corporate_unzp8a.png',
       description: 'Professional gatherings with a touch of natural elegance',
       features: ['Team Building', 'Conferences', 'Stress Relief Retreats', 'Executive Retreats']
     },
     {
       id: 'destination-weddings',
       title: 'Destination Weddings',
-      icon: '💍',
+      iconImage: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1773034939/destination_qcpvfh.png',
       description: 'Unforgettable celebrations in breathtaking mountain venues',
       features: ['Luxury Venues', 'Custom Themes', 'Full-Service Planning', 'Return Gift Services']
     },
     {
       id: 'birthday-parties',
       title: 'Special Occasions',
-      icon: '🎉',
+      iconImage: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1773034934/events_cohpce.png',
       description: 'Joyful celebrations tailored for all ages',
       features: ['Themed Decorations', 'Entertainment & Games', 'Catering Services', 'Return Gift Services']
+    },
+    {
+      id: 'wellness-retreats',
+      title: 'Wellness Retreats',
+      iconImage: 'https://res.cloudinary.com/dhlvq35cc/image/upload/v1773033778/retreat_q1b8yt.png',
+      description: 'Rejuvenate your mind, body and soul among the mountains',
+      features: ['Yoga & Meditation', 'Ayurvedic Spa', 'Nature Immersion', 'Nutrition & Wellness']
     }
   ];
 
@@ -144,52 +175,100 @@ export default function Services() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl tracking-wide font-serif text-white mb-6">Our Signature Services</h2>
             <p className="text-xl text-[#E5E4E2]/80 max-w-3xl mx-auto font-light">
-              Four distinct experiences, each crafted to perfection with uncompromising attention to detail.
+              Five distinct experiences, each crafted to perfection with uncompromising attention to detail.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <Link
-                href={
-                  service.id === 'farm-tourism' ? '/services/farm-tourism' :
-                    service.id === 'corporate-events' ? '/services/corporate-events' :
-                      service.id === 'destination-weddings' ? '/services/destination-weddings' :
-                        service.id === 'birthday-parties' ? '/services/special-occasions' : '#'
-                }
-                key={service.id}
-                className="block"
+          <div className="relative group/slider">
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300 opacity-0 group-hover/slider:opacity-100 shadow-xl backdrop-blur-sm"
+              aria-label="Previous service"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={nextSlide}
+              className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300 opacity-0 group-hover/slider:opacity-100 shadow-xl backdrop-blur-sm"
+              aria-label="Next service"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            <div className="overflow-hidden">
+              <motion.div
+                className="flex -mx-4 items-stretch py-4"
+                animate={{
+                  x: `-${currentIndex * (100 / cardsToShow)}%`
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
               >
-                <Card
-                  variant="glass"
-                  className="p-8 cursor-pointer transition-all duration-500 h-full"
-                >
-                  <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/5 border border-white/10 text-3xl text-[#E5E4E2] group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500">
-                    {service.icon}
+                {services.map((service, index) => (
+                  <div
+                    key={service.id}
+                    className="w-full md:w-1/2 lg:w-1/4 shrink-0 px-4"
+                  >
+                    <Link
+                      href={
+                        service.id === 'farm-tourism' ? '/services/farm-tourism' :
+                          service.id === 'corporate-events' ? '/services/corporate-events' :
+                            service.id === 'destination-weddings' ? '/services/destination-weddings' :
+                              service.id === 'birthday-parties' ? '/services/special-occasions' :
+                                service.id === 'wellness-retreats' ? '/services/wellness-retreat' : '#'
+                      }
+                      className="block h-full"
+                    >
+                      <Card
+                        variant="glass"
+                        className="p-8 cursor-pointer transition-all duration-500 h-full"
+                      >
+                        <div className="mb-6 relative w-16 h-16 rounded-full overflow-hidden border border-white/10 group-hover:scale-110 group-hover:border-white/20 transition-all duration-500 shadow-lg">
+                          <CloudinaryImage
+                            src={service.iconImage}
+                            alt={service.title}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+
+                        <h3 className="text-2xl font-serif text-white mb-3">{service.title}</h3>
+                        <div className="h-px w-12 bg-[#E5E4E2]/30 mb-4 group-hover:w-full transition-all duration-700"></div>
+
+                        <p className="text-[#E5E4E2]/70 mb-6 leading-relaxed font-light text-sm">{service.description}</p>
+
+                        <div className="space-y-3 mb-8">
+                          {service.features.map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-3 group/item">
+                              <span className="text-[#E5E4E2]/40 text-[10px] group-hover/item:text-[#E5E4E2] transition-colors">◆</span>
+                              <span className="text-[#E5E4E2]/60 font-medium text-sm group-hover/item:text-white transition-colors">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="absolute bottom-6 right-6">
+                          <div className="w-10 h-10 rounded-full border border-[#E5E4E2]/20 flex items-center justify-center text-[#E5E4E2] transition-all duration-300 group-hover:bg-[#E5E4E2] group-hover:text-primary group-hover:scale-110">
+                            <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                          </div>
+                        </div>
+                      </Card>
+                    </Link>
                   </div>
+                ))}
+              </motion.div>
+            </div>
 
-                  <h3 className="text-2xl font-serif text-white mb-3">{service.title}</h3>
-                  <div className="h-px w-12 bg-[#E5E4E2]/30 mb-4 group-hover:w-full transition-all duration-700"></div>
-
-                  <p className="text-[#E5E4E2]/70 mb-6 leading-relaxed font-light text-sm">{service.description}</p>
-
-                  <div className="space-y-3 mb-8">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-3 group/item">
-                        <span className="text-[#E5E4E2]/40 text-[10px] group-hover/item:text-[#E5E4E2] transition-colors">◆</span>
-                        <span className="text-[#E5E4E2]/60 font-medium text-sm group-hover/item:text-white transition-colors">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="absolute bottom-6 right-6">
-                    <div className="w-10 h-10 rounded-full border border-[#E5E4E2]/20 flex items-center justify-center text-[#E5E4E2] transition-all duration-300 group-hover:bg-[#E5E4E2] group-hover:text-primary group-hover:scale-110">
-                      <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
-                    </div>
-                  </div>
-                </Card>
-              </Link>
-            ))}
+            <div className="flex justify-center gap-3 mt-12">
+              {Array.from({ length: services.length - cardsToShow + 1 }).map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentIndex(idx)}
+                  className={`h-1.5 transition-all duration-500 rounded-full ${currentIndex === idx ? 'w-8 bg-[#E5E4E2]' : 'w-2 bg-white/20 hover:bg-white/40'}`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

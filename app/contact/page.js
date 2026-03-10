@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
+import { CloudinaryImage } from "../components/CloudinaryMedia";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { Phone, Mail, MapPin, Clock, ChevronDown, ChevronLeft, ChevronRight, Send, Check, Loader2, AlertCircle, CheckCircle2, Calendar, Video, X, User, ArrowRight } from "lucide-react";
@@ -156,12 +156,12 @@ export default function Contact() {
           >
             <div className="absolute inset-0 border border-primary/10 rounded-t-[300px] rounded-b-[20px] translate-x-4 translate-y-4"></div>
             <div className="relative h-full w-full rounded-t-[300px] rounded-b-[20px] overflow-hidden shadow-2xl">
-              <Image
-                src="/scenic-mountain-wedding-venue-with-traditional-dec.png"
+              <CloudinaryImage
+                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy8_riiah7.jpg"
                 alt="Scenic Wedding Venue"
                 fill
                 className="object-cover"
-                priority
+                priority={true}
               />
               <div className="absolute inset-0 bg-primary/10"></div>
             </div>
