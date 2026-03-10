@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  serverExternalPackages: ['aws-sdk'],
   images: {
     remotePatterns: [
       {
@@ -10,6 +11,4 @@ const nextConfig = {
     ],
   },
 };
-
-
 export default nextConfig;
