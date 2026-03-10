@@ -7,7 +7,9 @@ export async function generateMetadata({ params }) {
     const { id } = await params;
 
     try {
-        const blog = await Blog.findById(id);
+        const isObjectId = id.match(/^[0-9a-fA-F]{24}$/);
+        const query = isObjectId ? { $or: [{ _id: id }, { slug: id }] } : { slug: id };
+        const blog = await Blog.findOne(query);
         if (!blog) {
             return {
                 title: 'Blog Not Found | Paradise Bliss',
@@ -38,7 +40,9 @@ export default async function BlogPage({ params }) {
 
     let initialBlog = null;
     try {
-        const blog = await Blog.findById(id);
+        const isObjectId = id.match(/^[0-9a-fA-F]{24}$/);
+        const query = isObjectId ? { $or: [{ _id: id }, { slug: id }] } : { slug: id };
+        const blog = await Blog.findOne(query);
         if (blog) {
             initialBlog = JSON.parse(JSON.stringify(blog));
         }

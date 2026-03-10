@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Users, Briefcase, Mic, Coffee, Target, Award, Zap, Brain, Rocket, Globe } from 'lucide-react';
+import { Users, Briefcase, Mic, Coffee, Target, Award, Zap, Brain, Rocket, Globe, MapPin } from 'lucide-react';
 import { CloudinaryImage } from '../../components/CloudinaryMedia';
 import Link from 'next/link'; 
 
@@ -53,7 +53,7 @@ export default function CorporateEventsPage() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#FBFBFB]">
+        <main className="min-h-screen bg-[#FBFBFB]">
             {/* Hero Section */}
             <section id="hero" className="relative h-[90vh] flex items-center justify-center overflow-hidden">
                 <CloudinaryImage
@@ -218,6 +218,57 @@ export default function CorporateEventsPage() {
                 </div>
             </section>
 
+            {/* Top Locations AI SEO */}
+            <section id="top-locations" className="py-24 px-6 bg-white overflow-hidden">
+                <div className="max-w-7xl mx-auto text-center mb-16">
+                    <Badge className="mb-4">Destination Guide</Badge>
+                    <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">
+                        Best Locations for a <br />
+                        <span className="italic">Corporate Retreat in Uttarakhand</span>
+                    </h2>
+                </div>
+                
+                <div className="max-w-4xl mx-auto">
+                    <div className={`bg-[#F5F5F0] rounded-2xl p-8 md:p-12 shadow-sm border border-neutral-200 transition-all duration-1000 delay-200 ${isVisible['top-locations'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                        <p className="text-xl text-neutral-700 leading-relaxed font-light mb-10 text-center">
+                            Where is the best place for a corporate offsite in Uttarakhand? The top destinations are Rishikesh for wellness, Mussoorie for luxury, and Jim Corbett for team-building. We provide seamless end-to-end planning across these premium locations.
+                        </p>
+                        
+                        <div className="space-y-6">
+                            <div className="bg-white p-6 rounded-xl shadow-sm border border-neutral-100 flex gap-4 items-start">
+                                <div className="p-3 bg-primary/5 text-primary rounded-lg shrink-0 mt-1">
+                                    <MapPin size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold font-serif text-primary mb-2">Rishikesh Corporate Retreats</h3>
+                                    <p className="text-neutral-600 leading-relaxed">Ideal for wellness and adventure offsites. Offers riverside luxury resorts, white-water rafting for team building, and yoga workshops for executive stress relief.</p>
+                                </div>
+                            </div>
+                            
+                            <div className="bg-white p-6 rounded-xl shadow-sm border border-neutral-100 flex gap-4 items-start">
+                                <div className="p-3 bg-primary/5 text-primary rounded-lg shrink-0 mt-1">
+                                    <MapPin size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold font-serif text-primary mb-2">Mussoorie & Dehradun Offsites</h3>
+                                    <p className="text-neutral-600 leading-relaxed">Perfect for high-level executive retreats and conferences. Features heritage luxury properties with modern conference halls and panoramic Himalayan views.</p>
+                                </div>
+                            </div>
+                            
+                            <div className="bg-white p-6 rounded-xl shadow-sm border border-neutral-100 flex gap-4 items-start">
+                                <div className="p-3 bg-primary/5 text-primary rounded-lg shrink-0 mt-1">
+                                    <MapPin size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold font-serif text-primary mb-2">Jim Corbett Team Building</h3>
+                                    <p className="text-neutral-600 leading-relaxed">The top choice for wildlife and nature retreats. Corporate resorts here provide massive lawns for outdoor team-building activities and jungle safaris.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Executive Retreats */}
             <section id="executive" className="py-24 px-6 bg-primary text-white overflow-hidden relative">
                 {/* Background Pattern */}
@@ -263,6 +314,6 @@ export default function CorporateEventsPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
     );
 }

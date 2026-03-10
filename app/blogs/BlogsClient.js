@@ -57,7 +57,7 @@ const BlogsClient = () => {
     }
 
     return (
-        <div className='min-h-screen bg-background '>
+        <div className='min-h-screen bg-[#FBFBFB]'>
             {/* Hero Section - Elevated premium style */}
             <section
                 className='relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center bg-cover bg-center px-4 sm:px-6 md:px-8 overflow-hidden'
@@ -148,7 +148,7 @@ const BlogsClient = () => {
                                 />
                             </svg>
                         </div>
-                        <h3 className='text-2xl font-bold text-gray-800 mb-2'>No blogs found</h3>
+                        <h3 className='text-2xl font-serif text-neutral-900 mb-2'>No blogs found</h3>
                         <p className='text-gray-600'>
                             {searchTerm
                                 ? 'Try adjusting your search'
@@ -205,7 +205,7 @@ const BlogsClient = () => {
                                         </div>
                                     </div>
 
-                                    <h2 className='text-xl font-bold text-foreground mb-3 line-clamp-2 group-hover:text-primary transition-colors'>
+                                    <h2 className='text-xl font-serif text-neutral-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors'>
                                         {blog.title}
                                     </h2>
 
@@ -214,7 +214,7 @@ const BlogsClient = () => {
                                     </p>
 
                                     <Link
-                                        href={`/blogs/${blog._id}`}
+                                        href={`/blogs/${blog.slug || blog._id}`}
                                         className='inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group/link'>
                                         Read More
                                         <svg

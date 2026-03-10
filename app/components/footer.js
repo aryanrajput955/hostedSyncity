@@ -1,7 +1,16 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import BookingModal from "./BookingModal";
+import { AnimatePresence } from "framer-motion";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const [isScheduleModalOpen, setIsScheduleModalOpen] = useState(false);
+  
+  if (pathname?.startsWith("/admin")) return null;
   return (
     <footer className="bg-background text-primary">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -134,34 +143,38 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <Link href="/contact#schedule-meeting" className="block bg-primary/10 rounded-lg p-4 hover:bg-primary/20 transition-colors cursor-pointer">
+            <button
+              onClick={() => setIsScheduleModalOpen(true)}
+              className="w-full text-left block bg-primary/10 rounded-lg p-4 hover:bg-primary/20 transition-colors cursor-pointer"
+            >
               <p className="text-sm font-medium mb-2">Free Consultation</p>
               <p className="text-primary/80 text-xs">
                 Schedule a free session to plan your dream event.
               </p>
-            </Link>
+            </button>
           </div>
         </div>
 
         <div className="border-t border-primary/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-primary/80 text-sm">
-              © 2025 Syncity. All rights reserved. Made with ❤️ in the Himalayas.
+              © 2026 Syncity. All rights reserved. Made with ❤️ in the Himalayas.
             </p>
             <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-primary/80 hover:text-primary transition-colors">
+              <Link href="/privacy-policy" className="text-primary/80 hover:text-primary transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-primary/80 hover:text-primary transition-colors">
-                Terms of Service
-              </Link>
-              <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="text-primary/80 hover:text-primary transition-colors">
+
+              <a href="/site-map" target="_blank" rel="noopener noreferrer" className="text-primary/80 hover:text-primary transition-colors">
                 Sitemap
               </a>
             </div>
           </div>
         </div>
       </div>
+      <AnimatePresence>
+        {isScheduleModalOpen && <BookingModal onClose={() => setIsScheduleModalOpen(false)} />}
+      </AnimatePresence>
     </footer>
   );
 }

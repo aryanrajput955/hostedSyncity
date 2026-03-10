@@ -26,16 +26,43 @@ const Page = () => {
     return <CustomLoader />;
   }
 
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Syncity Events",
+    "url": "https://syncityevents.com",
+    "logo": "https://syncityevents.com/logo.jpg", 
+    "description": "Bespoke destination wedding planners and corporate retreat organizers in Uttarakhand, India.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-63977-23250",
+      "contactType": "customer service",
+      "email": "connect@syncityevents.com",
+      "areaServed": "IN",
+      "availableLanguage": "en"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Haridwar",
+      "addressRegion": "Uttarakhand",
+      "addressCountry": "IN"
+    }
+  };
+
   return (
-    <>
-      <VideoSection />
-      {/* <HeroSection /> */}
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      />
+      <HeroSection />
       <EcoFriendlySection />
       <WhyWeStartedSection />
+      <VideoSection />
       <OurVisionSection />
       {/* <OneStationGallerySection /> */}
       <CTASection />
-    </>
+    </main>
   );
 };
 

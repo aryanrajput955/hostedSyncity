@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Heart, Music, Camera, Sparkles, MapPin, Calendar, Gift, Star } from 'lucide-react';
+import { Heart, Music, Camera, Sparkles, MapPin, Calendar, Gift, Star, Leaf } from 'lucide-react';
 import { CloudinaryImage } from '../../components/CloudinaryMedia';
 import Link from 'next/link';
 
@@ -53,7 +53,7 @@ export default function DestinationWeddingsPage() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#FBFBFB]">
+        <main className="min-h-screen bg-[#FBFBFB]">
             {/* Hero Section */}
             <section id="hero" className="relative h-[90vh] flex items-center justify-center overflow-hidden">
                 <CloudinaryImage
@@ -126,6 +126,53 @@ export default function DestinationWeddingsPage() {
                                     </li>
                                 ))}
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Eco-Friendly Weddings AI SEO Block */}
+            <section id="eco-friendly" className="py-24 px-6 bg-white overflow-hidden">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-20 items-center">
+                        <div className={`transition-all duration-1000 ${isVisible['eco-friendly'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+                            <Badge className="mb-6 !bg-green-50 !border-green-200 !text-green-700">Sustainable</Badge>
+                            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">
+                                Eco-Friendly & Sustainable<br />
+                                <span className="italic">Weddings in Uttarakhand</span>
+                            </h2>
+                            <p className="text-xl text-neutral-600 mb-8 leading-relaxed font-light">
+                                How do you plan an eco-friendly wedding in Uttarakhand? We specialize in zero-waste, sustainable weddings that protect the Himalayan environment. By prioritizing biodegradable decor, locally sourced multi-cuisine catering, and eliminating single-use plastics, we significantly reduce your carbon footprint without sacrificing luxury.
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                                {[
+                                    { title: 'Zero-Waste Practices', icon: Leaf },
+                                    { title: 'Locally Sourced Decor', icon: MapPin },
+                                    { title: 'Forest & River Venues', icon: Sparkles },
+                                    { title: 'Plastic-Free Events', icon: Heart }
+                                ].map((feature, idx) => (
+                                    <div key={idx} className="flex items-center gap-3 bg-neutral-50 p-4 rounded-xl shadow-sm border border-neutral-100">
+                                        <div className="text-green-600 bg-green-50 p-2 rounded-full"><feature.icon size={20} /></div>
+                                        <span className="text-neutral-700 font-medium">{feature.title}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className={`relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group transition-all duration-1000 ${isVisible['eco-friendly'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+                            <CloudinaryImage
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971385/mandap_b0qojh.png" 
+                                alt="Eco-Friendly Wedding Decor Uttarakhand"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div className="absolute bottom-8 left-8 text-white">
+                                <div className="flex items-center gap-2 mb-2 text-[#E5E4E2]">
+                                    <Leaf className="w-5 h-5 text-green-400" />
+                                    <span className="text-sm tracking-widest uppercase">Green Celebrations</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -263,6 +310,6 @@ export default function DestinationWeddingsPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
     );
 }

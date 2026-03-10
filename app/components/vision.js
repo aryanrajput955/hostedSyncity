@@ -36,7 +36,7 @@ export default function OurVisionSection() {
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <CloudinaryImage
                 src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968097/sy1_m5re6n.webp"
-                alt="crafting your vision"
+                alt="Crafting bespoke destination wedding vision in Uttarakhand"
                 width={600}
                 height={800}
                 priority={false}

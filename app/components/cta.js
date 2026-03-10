@@ -20,7 +20,7 @@ export default function CTASection() {
       <div className="absolute inset-0 opacity-20">
         <CloudinaryImage
           src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971372/bg3_phy7xs.jpg"
-          alt="Luxury Event Background"
+          alt="Luxury event and wedding planning background in Uttarakhand"
           fill
           priority={false}
           className="object-cover"

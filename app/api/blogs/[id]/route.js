@@ -8,7 +8,10 @@ export async function GET(req, { params }) {
     const { id } = await params;
 
     try {
-        const blog = await Blog.findById(id);
+        const isObjectId = id.match(/^[0-9a-fA-F]{24}$/);
+        const query = isObjectId ? { $or: [{ _id: id }, { slug: id }] } : { slug: id };
+        
+        const blog = await Blog.findOne(query);
 
         if (!blog) {
             return NextResponse.json(

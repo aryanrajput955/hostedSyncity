@@ -12,7 +12,7 @@ export default function CombinedSections() {
       <div className="absolute inset-0 z-0">
         <CloudinaryImage
           src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971373/bg2_op6hig.png"
-          alt="Background"
+          alt="Luxury wedding background texture Uttarakhand"
           fill
           priority={true}
           className="object-cover opacity-15"
@@ -132,7 +132,7 @@ export function WhyWeStartedSection() {
             <div className="relative">
               <CloudinaryImage
                 src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971397/whywe_telg2l.png"
-                alt="Wedding Planning Journey"
+                alt="Syncity Events wedding planning process in Uttarakhand"
                 width={800}
                 height={800}
                 priority={true}
@@ -161,21 +161,24 @@ export function ServicesPreviewSection() {
       image: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy4_uca7qn.webp",
       title: "Destination Weddings",
       description: "Exchange vows amidst the majestic peaks. We curate intimate ceremonies and grand celebrations in Uttarakhand's most breathtaking locations.",
-      features: ["Mountain Venues", "Luxury Decor", "Full Coordination"]
+      features: ["Mountain Venues", "Luxury Decor", "Full Coordination"],
+      link: "/services/destination-weddings"
     },
     {
       id: "02",
       image: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968095/sy9_iyskdz.jpg",
       title: "Corporate Events",
       description: "Elevate your business gatherings. From executive retreats to large-scale conferences, we engage your team in an inspiring mountain setting.",
-      features: ["Team Building", "Executive Retreats", "Seminars"]
+      features: ["Team Building", "Executive Retreats", "Seminars"],
+      link: "/services/corporate-events"
     },
     {
       id: "03",
       image: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971066/sy12_qcl3ym.avif",
       title: "Farm Tourism",
       description: "Reconnect with nature. Experience the authentic rural charm of Devbhoomi with curated farm stays, traditional cuisine, and local culture.",
-      features: ["Village Tours", "Organic Dining", "Cultural Immersion"]
+      features: ["Village Tours", "Organic Dining", "Cultural Immersion"],
+      link: "/services/farm-tourism"
     }
   ];
 
@@ -201,60 +204,60 @@ export function ServicesPreviewSection() {
           </h2>
         </div>
 
-        {/* Luxury Cards Layout */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        {/* Luxury Cards Layout */}        <div className="grid lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              onMouseEnter={() => setActiveService(index)}
-              className="group relative h-[500px] bg-white shadow-xl hover:shadow-2xl transition-all duration-500 rounded-none overflow-hidden cursor-pointer"
-            >
-              {/* Background Image */}
-              <CloudinaryImage
-                src={service.image}
-                alt={service.title}
-                fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-110"
-              />
+            <Link key={index} href={service.link || "#"} className="block">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                onMouseEnter={() => setActiveService(index)}
+                className="group relative h-[500px] bg-white shadow-xl hover:shadow-2xl transition-all duration-500 rounded-none overflow-hidden cursor-pointer"
+              >
+                {/* Background Image */}
+                <CloudinaryImage
+                  src={service.image}
+                  alt={`Syncity Events ${service.title} in Uttarakhand`}
+                  fill
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
 
-              {/* Gradient Overlay - Always visible for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-neutral-900/40 to-transparent transition-opacity duration-500"></div>
+                {/* Gradient Overlay - Always visible for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-neutral-900/40 to-transparent transition-opacity duration-500"></div>
 
-              {/* Border Frame (Animated) */}
-              <div className="absolute inset-4 border border-white/20 group-hover:border-primary/60 transition-colors duration-500 z-20"></div>
+                {/* Border Frame (Animated) */}
+                <div className="absolute inset-4 border border-white/20 group-hover:border-primary/60 transition-colors duration-500 z-20"></div>
 
-              {/* Content */}
-              <div className="absolute inset-0 p-8 flex flex-col justify-end z-30">
-                {/* Number */}
-                <div className="absolute top-8 right-8 text-4xl font-serif text-white/20 group-hover:text-primary transition-colors duration-500">
-                  {service.id}
+                {/* Content */}
+                <div className="absolute inset-0 p-8 flex flex-col justify-end z-30">
+                  {/* Number */}
+                  <div className="absolute top-8 right-8 text-4xl font-serif text-white/20 group-hover:text-primary transition-colors duration-500">
+                    {service.id}
+                  </div>
+
+                  <h3 className="text-3xl font-serif text-white mb-2 group-hover:-translate-y-2 transition-transform duration-500 drop-shadow-md">
+                    {service.title}
+                  </h3>
+
+                  <div className="w-12 h-0.5 bg-primary mb-4 transform scale-x-100 lg:scale-x-0 lg:group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+
+                  <p className="text-neutral-200 font-light leading-relaxed mb-6 opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-500 delay-100">
+                    {service.description}
+                  </p>
+
+                  {/* Features List (Visible on Hover) */}
+                  <div className="space-y-2 opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-500 delay-200">
+                    {service.features.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm text-[#E5E4E2]">
+                        <span className="w-1 h-1 bg-primary rounded-full"></span>
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-
-                <h3 className="text-3xl font-serif text-white mb-2 group-hover:-translate-y-2 transition-transform duration-500 drop-shadow-md">
-                  {service.title}
-                </h3>
-
-                <div className="w-12 h-0.5 bg-primary mb-4 transform scale-x-100 lg:scale-x-0 lg:group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-
-                <p className="text-neutral-200 font-light leading-relaxed mb-6 opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-500 delay-100">
-                  {service.description}
-                </p>
-
-                {/* Features List (Visible on Hover) */}
-                <div className="space-y-2 opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-500 delay-200">
-                  {service.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-[#E5E4E2]">
-                      <span className="w-1 h-1 bg-primary rounded-full"></span>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </Link>
           ))}
         </div>
 
@@ -272,7 +275,7 @@ export function ServicesPreviewSection() {
                   View All Services
                 </span>
                 <svg
-                  className="w-4 h-4 text-primary group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-1 transition-transform"
+                  className="w-4 h-4 text-primary group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

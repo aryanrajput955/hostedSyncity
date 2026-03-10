@@ -4,12 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
   // We use hover state for desktop "dropdown on hover"
   const [isHovered, setIsHovered] = useState(false);
   // Separate state for mobile toggle
   const [isOpen, setIsOpen] = useState(false);
+
+  if (pathname?.startsWith("/admin")) return null;
 
   // Lock body scroll when mobile menu is open
   // (Optional depending on preference, but good for UX)

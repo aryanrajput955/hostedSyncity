@@ -32,7 +32,7 @@ export const metadata = {
     siteName: "SyncityEvents",
     images: [
       {
-        url: "/hamper.png", // 🔄 Replace with your OG image
+        url: "/og.jpeg", // 🔄 Replace with your OG image
         width: 1200,
         height: 630,
         alt: "SyncityEvents - Event Management in Uttarakhand",
