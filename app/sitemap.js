@@ -74,6 +74,7 @@ export default function sitemap() {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    
   ];
 
   return staticPages;
