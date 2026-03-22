@@ -49,9 +49,7 @@ export const metadata = {
       "Your one-stop destination for event management in Uttarakhand. Corporate events, weddings, retreats & more.",
     images: ["/hamper.png"], // 🔄 Replace with your image
   },
-  alternates: {
-    canonical: "https://www.syncityevents.com",
-  },
+  metadataBase: new URL("https://www.syncityevents.com"),
   icons: {
     icon: "/logo.jpg", // 👈 place your favicon.ico in /public
     shortcut: "/logo.jpg",
