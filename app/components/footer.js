@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -9,12 +9,34 @@ import { AnimatePresence } from "framer-motion";
 export default function Footer() {
   const pathname = usePathname();
   const [isScheduleModalOpen, setIsScheduleModalOpen] = useState(false);
+  const [blogs, setBlogs] = useState([]);
+  const [blogsLoading, setBlogsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const baseUrl = (process.env.NEXT_PUBLIC_API_URL || "").replace(/\/$/, "");
+        const url = `${baseUrl}/api/blogs`;
+        const response = await fetch(url);
+        const data = await response.json();
+        if (data.success) {
+          // Show up to 3 blogs, or all if less than 3
+          setBlogs(data.data ? data.data.slice(0, 3) : (data.blogs ? data.blogs.slice(0, 3) : []));
+        }
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      } finally {
+        setBlogsLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
   
   if (pathname?.startsWith("/admin")) return null;
   return (
     <footer className="bg-background text-primary">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <Image src="/logo2.png" alt="Syncity Logo" width={260} height={240} className=" w-25 h-25 md:w-30 md:h-30" />
@@ -118,7 +140,32 @@ export default function Footer() {
           </div>
 
           <div className="space-y-6">
-            <h4 className="text-xl font-bold">Get In Touch</h4>
+            <h4 className="text-xl font-bold">Blogs</h4>
+            <ul className="space-y-3 text-sm">
+              {blogsLoading ? (
+                <li className="text-primary/80">Loading...</li>
+              ) : blogs.length > 0 ? (
+                blogs.map((blog) => (
+                  <li key={blog._id}>
+                    <Link
+                      href={`/blogs/${blog.slug}`}
+                      className="text-primary/80 hover:text-primary transition-colors line-clamp-2"
+                      title={blog.title}
+                    >
+                      {blog.title}
+                    </Link>
+                  </li>
+                ))
+              ) : (
+                <li className="text-primary/80">No blogs available</li>
+              )}
+            </ul>
+            <Link href="/blogs" className="text-primary/80 hover:text-primary transition-colors text-sm font-medium">
+              View All Blogs →
+            </Link>
+          </div>
+
+          <div className="space-y-6">
             <div className="space-y-4 text-sm">
               <div className="flex items-start space-x-3">
                 <span className="text-accent mt-1">📍</span>
@@ -130,15 +177,16 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <span className="text-accent">📞</span>
                 <div>
-                  <p className="font-medium">+91 63977 23250</p>
-                  <p className="font-medium">+91 84330 23265</p>
+                  <a href="tel:+916397723250" className="font-medium hover:text-accent transition-colors">+91 63977 23250</a>
+                  <br />
+                  <a href="tel:+918433023265" className="font-medium hover:text-accent transition-colors">+91 84330 23265</a>
                   <p className="text-primary/80 text-xs">Available 24/7</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="text-accent">✉️</span>
                 <div>
-                  <p className="font-medium">connect@syncityevents.com</p>
+                  <a href="mailto:connect@syncityevents.com" className="font-medium hover:text-accent transition-colors">connect@syncityevents.com</a>
                   <p className="text-primary/80 text-xs">Quick response guaranteed</p>
                 </div>
               </div>

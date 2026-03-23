@@ -397,6 +397,35 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Location & Map Section */}
+      <section className="py-10 md:py-16 px-6 relative z-10 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <div className="h-px w-12 bg-primary/30"></div>
+              <span className="text-sm font-medium text-neutral-500 tracking-[0.2em] uppercase">Our Location</span>
+              <div className="h-px w-12 bg-primary/30"></div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-4">Visit Us at Syncity</h2>
+            <p className="text-lg text-neutral-600 font-light max-w-2xl mx-auto">Find us in the heart of Haridwar, nestled in the serene foothills of the Himalayas</p>
+          </div>
+          
+          <div className="flex justify-center">
+            <div className="w-full max-w-4xl shadow-lg border border-neutral-200 overflow-hidden">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.910212588472!2d78.07791287534008!3d29.924486974984138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390949795d4e5cfd%3A0x97ead02e6b56d2d6!2sSyncity%20Events%20I%20Event%20Management%20Company!5e0!3m2!1sen!2sin!4v1774286884558!5m2!1sen!2sin" 
+                width="100%" 
+                height="450" 
+                style={{border:0}} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Schedule a Meeting Section */}
       <ScheduleMeetingSection />
 
@@ -638,4 +667,4 @@ function ScheduleMeetingSection() {
     </>
   );
 }
-
+

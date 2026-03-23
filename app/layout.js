@@ -11,6 +11,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 
 // ✅ SEO Metadata
 export const metadata = {
+  metadataBase: new URL("https://www.syncityevents.com"),
   title: "SyncityEvents - Corporate Meetings, Weddings & Retreats in Uttarakhand",
   description:
     "SyncityEvents organizes corporate meetings, destination weddings, stress relief retreats, venues, and everything related to events in Uttarakhand. We make your events stress-free and memorable.",
@@ -25,6 +26,24 @@ export const metadata = {
     "Event Planners Uttarakhand",
     "Wedding Planners Uttarakhand",
   ],
+  authors: [{ name: "Syncity Events" }],
+  creator: "Syncity Events",
+  publisher: "Syncity Events",
+  formatDetection: {
+    email: true,
+    telephone: true,
+    address: true,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+    },
+  },
   openGraph: {
     title: "SyncityEvents - Event Management in Uttarakhand",
     description:
