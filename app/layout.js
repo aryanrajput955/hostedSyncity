@@ -34,6 +34,9 @@ export const metadata = {
     telephone: true,
     address: true,
   },
+  alternates: {
+    canonical: 'https://www.syncityevents.com',
+  },
   robots: {
     index: true,
     follow: true,

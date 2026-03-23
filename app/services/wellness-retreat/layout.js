@@ -7,6 +7,9 @@ export const metadata = {
     telephone: true,
     address: true,
   },
+  alternates: {
+    canonical: 'https://www.syncityevents.com/services/wellness-retreat',
+  },
   robots: {
     index: true,
     follow: true,

@@ -7,6 +7,9 @@ export const metadata = {
     telephone: true,
     address: true,
   },
+  alternates: {
+    canonical: 'https://www.syncityevents.com/services',
+  },
   robots: {
     index: true,
     follow: true,
