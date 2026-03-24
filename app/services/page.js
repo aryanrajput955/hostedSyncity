@@ -212,11 +212,11 @@ export default function Services() {
                   >
                     <Link
                       href={
-                        service.id === 'farm-tourism' ? '/services/farm-tourism' :
-                          service.id === 'corporate-events' ? '/services/corporate-events' :
-                            service.id === 'destination-weddings' ? '/services/destination-weddings' :
-                              service.id === 'birthday-parties' ? '/services/special-occasions' :
-                                service.id === 'wellness-retreats' ? '/services/wellness-retreat' : '#'
+                        service.id === 'farm-tourism' ? '/farm-tourism' :
+                          service.id === 'corporate-events' ? '/corporate-events' :
+                            service.id === 'destination-weddings' ? '/destination-weddings' :
+                              service.id === 'birthday-parties' ? '/special-occasions' :
+                                service.id === 'wellness-retreats' ? '/wellness-retreat' : '#'
                       }
                       className="block h-full"
                     >

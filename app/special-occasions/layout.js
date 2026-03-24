@@ -8,7 +8,7 @@ export const metadata = {
     address: true,
   },
   alternates: {
-    canonical: 'https://www.syncityevents.com/services/wellness-retreat',
+    canonical: 'https://www.syncityevents.com/special-occasions',
   },
   robots: {
     index: true,
@@ -22,6 +22,6 @@ export const metadata = {
   },
 };
 
-export default function WellnessRetreatLayout({ children }) {
+export default function SpecialOccasionsLayout({ children }) {
   return children;
 }

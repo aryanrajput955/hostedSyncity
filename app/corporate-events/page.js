@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Users, Briefcase, Mic, Coffee, Target, Award, Zap, Brain, Rocket, Globe, MapPin } from 'lucide-react';
-import { CloudinaryImage } from '../../components/CloudinaryMedia';
+import { CloudinaryImage } from '../components/CloudinaryMedia';
 import Link from 'next/link'; 
 
 function Button({ className = "", children, variant = "primary", ...props }) {

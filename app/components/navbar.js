@@ -142,27 +142,27 @@ export default function Navbar() {
                     <NavLink href="/services" label="Services" />
                     <div className="pl-3 mt-1 space-y-0.5 border-l-2 border-primary/5 ml-4">
                       <NavLink
-                        href="/services/wellness-retreat"
+                        href="/wellness-retreat"
                         label="Wellness Retreat"
                         isSub
                       />
                       <NavLink
-                        href="/services/destination-weddings"
+                        href="/destination-weddings"
                         label="Destination Weddings"
                         isSub
                       />
                       <NavLink
-                        href="/services/corporate-events"
+                        href="/corporate-events"
                         label="Corporate Events"
                         isSub
                       />
                       <NavLink
-                        href="/services/farm-tourism"
+                        href="/farm-tourism"
                         label="Farm Tourism"
                         isSub
                       />
                       <NavLink
-                        href="/services/special-occasions"
+                        href="/special-occasions"
                         label="Special Occasions"
                         isSub
                       />
@@ -209,31 +209,31 @@ export default function Navbar() {
                   />
                   <div className="pl-6 flex flex-col gap-4 border-l border-neutral-200 ml-2">
                     <MobileNavLink
-                      href="/services/wellness-retreat"
+                      href="/wellness-retreat"
                       label="Wellness Retreat"
                       isSub
                       onClick={() => setIsOpen(false)}
                     />
                     <MobileNavLink
-                      href="/services/destination-weddings"
+                      href="/destination-weddings"
                       label="Destination Weddings"
                       isSub
                       onClick={() => setIsOpen(false)}
                     />
                     <MobileNavLink
-                      href="/services/corporate-events"
+                      href="/corporate-events"
                       label="Corporate Events"
                       isSub
                       onClick={() => setIsOpen(false)}
                     />
                     <MobileNavLink
-                      href="/services/farm-tourism"
+                      href="/farm-tourism"
                       label="Farm Tourism"
                       isSub
                       onClick={() => setIsOpen(false)}
                     />
                     <MobileNavLink
-                      href="/services/special-occasions"
+                      href="/special-occasions"
                       label="Special Occasions"
                       isSub
                       onClick={() => setIsOpen(false)}

@@ -76,27 +76,27 @@ export default function Footer() {
             <h4 className="text-xl font-bold">Our Services</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/services/destination-weddings" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/destination-weddings" className="text-primary/80 hover:text-primary transition-colors">
                   Destination Weddings
                 </Link>
               </li>
               <li>
-                <Link href="/services/corporate-events" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/corporate-events" className="text-primary/80 hover:text-primary transition-colors">
                   Corporate Events & Retreats
                 </Link>
               </li>
               <li>
-                <Link href="/services/farm-tourism" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/farm-tourism" className="text-primary/80 hover:text-primary transition-colors">
                   Farm Tourism
                 </Link>
               </li>
               <li>
-                <Link href="/services/wellness-retreat" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/wellness-retreat" className="text-primary/80 hover:text-primary transition-colors">
                   Wellness Retreats
                 </Link>
               </li>
               <li>
-                <Link href="/services/special-occasions" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/special-occasions" className="text-primary/80 hover:text-primary transition-colors">
                   Special Occasions
                 </Link>
               </li>

@@ -162,7 +162,7 @@ export function ServicesPreviewSection() {
       title: "Destination Weddings",
       description: "Exchange vows amidst the majestic peaks. We curate intimate ceremonies and grand celebrations in Uttarakhand's most breathtaking locations.",
       features: ["Mountain Venues", "Luxury Decor", "Full Coordination"],
-      link: "/services/destination-weddings"
+      link: "/destination-weddings"
     },
     {
       id: "02",
@@ -170,7 +170,7 @@ export function ServicesPreviewSection() {
       title: "Corporate Events",
       description: "Elevate your business gatherings. From executive retreats to large-scale conferences, we engage your team in an inspiring mountain setting.",
       features: ["Team Building", "Executive Retreats", "Seminars"],
-      link: "/services/corporate-events"
+      link: "/corporate-events"
     },
     {
       id: "03",
@@ -178,7 +178,7 @@ export function ServicesPreviewSection() {
       title: "Farm Tourism",
       description: "Reconnect with nature. Experience the authentic rural charm of Devbhoomi with curated farm stays, traditional cuisine, and local culture.",
       features: ["Village Tours", "Organic Dining", "Cultural Immersion"],
-      link: "/services/farm-tourism"
+      link: "/farm-tourism"
     }
   ];
 

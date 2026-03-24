@@ -8,7 +8,7 @@ export const metadata = {
     address: true,
   },
   alternates: {
-    canonical: 'https://www.syncityevents.com/services/corporate-events',
+    canonical: 'https://www.syncityevents.com/destination-weddings',
   },
   robots: {
     index: true,
@@ -22,6 +22,6 @@ export const metadata = {
   },
 };
 
-export default function CorporateEventsLayout({ children }) {
+export default function DestinationWeddingsLayout({ children }) {
   return children;
 }
