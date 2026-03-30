@@ -83,6 +83,72 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Organization Schema */}
+        <Script
+          id="org-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Syncity Events",
+              url: "https://www.syncityevents.com",
+              logo: "https://www.syncityevents.com/logo.jpg",
+              description: "Premium event planning services for weddings, corporate events, and retreats in Uttarakhand",
+              sameAs: [
+                "https://www.instagram.com/syncityevents",
+               
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "Customer Service",
+                telephone: "+91-8433023265",
+                email: "connect@syncityevents.com"
+              },
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Near Gali No.12, Saubhagyavati Bhav, Tehri Visthapit Bhel, Tehri Visthapit Colony, Subhash Nagar, Haridwar",
+                addressLocality: "Uttarakhand",
+                addressRegion: "UK",
+                postalCode: "249407",
+                addressCountry: "IN"
+              }
+            })
+          }}
+        />
+
+        {/* BreadcrumbList Schema */}
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.syncityevents.com"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Services",
+                  item: "https://www.syncityevents.com/services"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Contact",
+                  item: "https://www.syncityevents.com/contact"
+                }
+              ]
+            })
+          }}
+        />
+
         <Script id="gtm-script" strategy="beforeInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
