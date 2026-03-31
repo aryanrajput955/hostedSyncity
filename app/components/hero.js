@@ -84,7 +84,7 @@ export default function HeroSection() {
       >
         <div className="max-w-3xl mx-auto px-6 flex items-center justify-center gap-8 md:gap-20">
           {[
-            { label: "Celebrations", value: "500+" },
+            { label: "Celebrations", value: "100+" },
             { label: "Venues", value: "50+" },
             { label: "Excellence", value: "5 Years" },
           ].map((stat, i) => (
