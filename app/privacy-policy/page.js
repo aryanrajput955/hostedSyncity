@@ -1,4 +1,5 @@
 import React from 'react';
+import Script from 'next/script';
 
 export const metadata = {
   title: "Privacy Policy | Syncity Events",
@@ -7,7 +8,32 @@ export const metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <main className="pt-32 pb-16 min-h-screen bg-neutral-50">
+    <>
+      <Script
+        id="privacy-policy-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.syncityevents.com"
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Privacy Policy",
+                item: "https://www.syncityevents.com/privacy-policy"
+              }
+            ]
+          })
+        }}
+      />
+      <main className="pt-32 pb-16 min-h-screen bg-neutral-50">
       <div className="max-w-4xl mx-auto px-6">
         <h1 className="text-4xl md:text-5xl font-serif text-primary mb-6">Privacy Policy</h1>
         <p className="text-neutral-500 mb-12">Last Updated: March 2026</p>
@@ -104,5 +130,6 @@ export default function PrivacyPolicy() {
         </div>
       </div>
     </main>
+    </>
   );
 }

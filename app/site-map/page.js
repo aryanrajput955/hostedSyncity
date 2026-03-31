@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export const metadata = {
   title: "Sitemap | Syncity Events",
@@ -33,10 +34,35 @@ export default function Sitemap() {
   ];
 
   return (
-    <main className="pt-32 pb-24 min-h-screen bg-neutral-50 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/5 rounded-bl-[400px]"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-tr-[300px]"></div>
+    <>
+      <Script
+        id="site-map-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.syncityevents.com"
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Site Map",
+                item: "https://www.syncityevents.com/site-map"
+              }
+            ]
+          })
+        }}
+      />
+      <main className="pt-32 pb-24 min-h-screen bg-neutral-50 relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/5 rounded-bl-[400px]"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-tr-[300px]"></div>
 
       <div className="max-w-3xl mx-auto px-6 relative z-10">
         <h1 className="text-4xl md:text-5xl font-serif text-primary mb-4 text-center">Site Map</h1>
@@ -86,6 +112,7 @@ export default function Sitemap() {
           </ul>
         </div>
       </div>
-    </main>
+      </main>
+    </>
   );
 }

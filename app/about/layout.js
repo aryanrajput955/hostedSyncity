@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 export const metadata = {
   authors: [{ name: "Syncity Events" }],
   creator: "Syncity Events",
@@ -23,5 +25,33 @@ export const metadata = {
 };
 
 export default function AboutLayout({ children }) {
-  return children;
+  return (
+    <>
+      <Script
+        id="about-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.syncityevents.com"
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "About",
+                item: "https://www.syncityevents.com/about"
+              }
+            ]
+          })
+        }}
+      />
+      {children}
+    </>
+  );
 }
