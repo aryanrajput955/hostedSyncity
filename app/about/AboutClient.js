@@ -117,7 +117,7 @@ export default function AboutClient() {
                   <div className="flex items-center gap-3">
                     <Star className="w-5 h-5 fill-primary" />
                     <div>
-                      <p className="font-serif font-bold text-lg leading-none">500+</p>
+                      <p className="font-serif font-bold text-lg leading-none">100+</p>
                       <p className="text-[10px] uppercase tracking-wider font-medium">Events Crafted</p>
                     </div>
                   </div>
