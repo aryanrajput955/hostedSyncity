@@ -60,7 +60,7 @@ export default function ServicesPreviewSection() {
         </div>
 
         <div className="text-center mt-12">
-          <Link href="/services">
+          <Link href="/services/">
             <button className="bg-[#897980] hover:bg-[#6E6066] text-[#EFE1DA] px-8 py-4 text-lg rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg">
               Explore All Services
             </button>

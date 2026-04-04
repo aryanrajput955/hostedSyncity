@@ -40,7 +40,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-4xl md:text-7xl lg:text-8xl font-serif text-white leading-[1.1] mb-6 md:mb-8"
+          className="text-4xl md:text-7xl lg:text-7xl xl:text-8xl font-serif text-white leading-[1.1] mb-6 md:mb-8"
         >
           Crafting <span className="italic text-[#E5E4E2]">Unforgettable</span><br className="hidden md:block" /> Moments
         </motion.h1>
@@ -62,12 +62,12 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center gap-4 md:gap-6"
         >
-          <Link href="/contact">
-            <button className="px-8 md:px-10 py-3 md:py-4 bg-[#E5E4E2] hover:bg-white text-primary text-xs md:text-sm font-medium tracking-widest uppercase transition-colors duration-300 min-w-[180px] md:min-w-[200px]">
+          <Link href="/contact/">
+            <button className="px-8 md:px-10 py-3 md:py-4 bg-[#E5E4E2] hover:bg-white text-primary text-xs md:text-sm font-medium tracking-widest uppercase transition-colors duration-300 min-w-[180px] md:min-w-[200px] border border-transparent">
               Start Journey
             </button>
           </Link>
-          <Link href="/services">
+          <Link href="/services/">
             <button className="px-8 md:px-10 py-3 md:py-4 border border-white/30 hover:border-white hover:bg-white/5 text-white text-xs md:text-sm font-medium tracking-widest uppercase transition-all duration-300 min-w-[180px] md:min-w-[200px]">
               Our Services
             </button>
@@ -80,7 +80,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 1 }}
-        className="relative md:absolute md:bottom-10 w-full z-20 mt-12 md:mt-0 pb-8 md:pb-0"
+        className="relative w-full z-20 mt-16 md:mt-auto pb-12"
       >
         <div className="max-w-3xl mx-auto px-6 flex items-center justify-center gap-8 md:gap-20">
           {[

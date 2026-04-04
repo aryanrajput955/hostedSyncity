@@ -76,27 +76,27 @@ export default function Footer() {
             <h4 className="text-xl font-bold">Our Services</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/destination-weddings" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/destination-weddings/" className="text-primary/80 hover:text-primary transition-colors">
                   Destination Weddings
                 </Link>
               </li>
               <li>
-                <Link href="/corporate-events" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/corporate-events/" className="text-primary/80 hover:text-primary transition-colors">
                   Corporate Events & Retreats
                 </Link>
               </li>
               <li>
-                <Link href="/farm-tourism" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/farm-tourism/" className="text-primary/80 hover:text-primary transition-colors">
                   Farm Tourism
                 </Link>
               </li>
               <li>
-                <Link href="/wellness-retreat" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/wellness-retreat/" className="text-primary/80 hover:text-primary transition-colors">
                   Wellness Retreats
                 </Link>
               </li>
               <li>
-                <Link href="/special-occasions" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/special-occasions/" className="text-primary/80 hover:text-primary transition-colors">
                   Special Occasions
                 </Link>
               </li>
@@ -107,17 +107,17 @@ export default function Footer() {
             <h4 className="text-xl font-bold">Quick Links</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/about" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/about/" className="text-primary/80 hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/services/" className="text-primary/80 hover:text-primary transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-primary/80 hover:text-primary transition-colors">
+                <Link href="/contact/" className="text-primary/80 hover:text-primary transition-colors">
                   Contact
                 </Link>
               </li>
@@ -148,7 +148,7 @@ export default function Footer() {
                 blogs.map((blog) => (
                   <li key={blog._id}>
                     <Link
-                      href={`/blogs/${blog.slug}`}
+                      href={`/blogs/${blog.slug}/`}
                       className="text-primary/80 hover:text-primary transition-colors line-clamp-2"
                       title={blog.title}
                     >
@@ -160,7 +160,7 @@ export default function Footer() {
                 <li className="text-primary/80">No blogs available</li>
               )}
             </ul>
-            <Link href="/blogs" className="text-primary/80 hover:text-primary transition-colors text-sm font-medium">
+            <Link href="/blogs/" className="text-primary/80 hover:text-primary transition-colors text-sm font-medium">
               View All Blogs →
             </Link>
           </div>
@@ -209,7 +209,7 @@ export default function Footer() {
               © 2026 Syncity. All rights reserved. Made with ❤️ in the Himalayas.
             </p>
             <div className="flex space-x-6 text-sm">
-              <Link href="/privacy-policy" className="text-primary/80 hover:text-primary transition-colors">
+              <Link href="/privacy-policy/" className="text-primary/80 hover:text-primary transition-colors">
                 Privacy Policy
               </Link>
 

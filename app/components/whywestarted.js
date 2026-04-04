@@ -162,7 +162,7 @@ export function ServicesPreviewSection() {
       title: "Destination Weddings",
       description: "Exchange vows amidst the majestic peaks. We curate intimate ceremonies and grand celebrations in Uttarakhand's most breathtaking locations.",
       features: ["Mountain Venues", "Luxury Decor", "Full Coordination"],
-      link: "/destination-weddings"
+      link: "/destination-weddings/"
     },
     {
       id: "02",
@@ -170,7 +170,7 @@ export function ServicesPreviewSection() {
       title: "Corporate Events",
       description: "Elevate your business gatherings. From executive retreats to large-scale conferences, we engage your team in an inspiring mountain setting.",
       features: ["Team Building", "Executive Retreats", "Seminars"],
-      link: "/corporate-events"
+      link: "/corporate-events/"
     },
     {
       id: "03",
@@ -178,7 +178,7 @@ export function ServicesPreviewSection() {
       title: "Farm Tourism",
       description: "Reconnect with nature. Experience the authentic rural charm of Devbhoomi with curated farm stays, traditional cuisine, and local culture.",
       features: ["Village Tours", "Organic Dining", "Cultural Immersion"],
-      link: "/farm-tourism"
+      link: "/farm-tourism/"
     }
   ];
 
@@ -263,7 +263,7 @@ export function ServicesPreviewSection() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <Link href="/services">
+          <Link href="/services/">
             <motion.button
               className="group relative px-10 py-5 bg-transparent overflow-hidden border border-primary/30 hover:border-primary transition-colors duration-300"
               whileHover={{ scale: 1.02 }}

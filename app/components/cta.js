@@ -67,7 +67,7 @@ export default function CTASection() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
-            <Link href="/contact">
+            <Link href="/contact/">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -80,7 +80,7 @@ export default function CTASection() {
               </motion.button>
             </Link>
 
-            <Link href="/services">
+            <Link href="/services/">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

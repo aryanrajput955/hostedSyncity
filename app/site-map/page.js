@@ -10,25 +10,25 @@ export const metadata = {
 export default function Sitemap() {
   const links = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
+    { name: "About Us", path: "/about/" },
     { 
       name: "Our Services", 
-      path: "/services",
+      path: "/services/",
       subLinks: [
-        { name: "Destination Weddings", path: "/services/destination-weddings" },
-        { name: "Corporate Events & Retreats", path: "/services/corporate-events" },
-        { name: "Farm Tourism", path: "/services/farm-tourism" },
-        { name: "Wellness Retreats", path: "/services/wellness-retreat" },
-        { name: "Special Occasions", path: "/services/special-occasions" },
+        { name: "Destination Weddings", path: "/services/destination-weddings/" },
+        { name: "Corporate Events & Retreats", path: "/services/corporate-events/" },
+        { name: "Farm Tourism", path: "/services/farm-tourism/" },
+        { name: "Wellness Retreats", path: "/services/wellness-retreat/" },
+        { name: "Special Occasions", path: "/services/special-occasions/" },
       ]
     },
-    { name: "Blogs", path: "/blogs" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "Blogs", path: "/blogs/" },
+    { name: "Contact Us", path: "/contact/" },
     { 
       name: "Legal", 
       path: null,
       subLinks: [
-        { name: "Privacy Policy", path: "/privacy-policy" },
+        { name: "Privacy Policy", path: "/privacy-policy/" },
       ]
     },
   ];

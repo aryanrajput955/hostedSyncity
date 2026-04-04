@@ -137,32 +137,31 @@ export default function Navbar() {
                 <div className="p-2">
                   <div className="space-y-1">
                     <NavLink href="/" label="Home" />
-                    <NavLink href="/about" label="About Us" />
-
-                    <NavLink href="/services" label="Services" />
+                    <NavLink href="/about/" label="About Us" />
+                    <NavLink href="/services/" label="Services" />
                     <div className="pl-3 mt-1 space-y-0.5 border-l-2 border-primary/5 ml-4">
                       <NavLink
-                        href="/wellness-retreat"
+                        href="/wellness-retreat/"
                         label="Wellness Retreat"
                         isSub
                       />
                       <NavLink
-                        href="/destination-weddings"
+                        href="/destination-weddings/"
                         label="Destination Weddings"
                         isSub
                       />
                       <NavLink
-                        href="/corporate-events"
+                        href="/corporate-events/"
                         label="Corporate Events"
                         isSub
                       />
                       <NavLink
-                        href="/farm-tourism"
+                        href="/farm-tourism/"
                         label="Farm Tourism"
                         isSub
                       />
                       <NavLink
-                        href="/special-occasions"
+                        href="/special-occasions/"
                         label="Special Occasions"
                         isSub
                       />
@@ -170,9 +169,8 @@ export default function Navbar() {
 
                     <div className="h-px bg-neutral-100 my-2 mx-2"></div>
 
-                    <NavLink href="/blogs" label="Blog" />
-
-                    <NavLink href="/contact" label="Contact" isPrimary />
+                    <NavLink href="/blogs/" label="Blog" />
+                    <NavLink href="/contact/" label="Contact" isPrimary />
                   </div>
                 </div>
               </motion.div>
@@ -196,44 +194,44 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                 />
                 <MobileNavLink
-                  href="/about"
+                  href="/about/"
                   label="About Us"
                   onClick={() => setIsOpen(false)}
                 />
 
                 <div className="space-y-4">
                   <MobileNavLink
-                    href="/services"
+                    href="/services/"
                     label="Services"
                     onClick={() => setIsOpen(false)}
                   />
                   <div className="pl-6 flex flex-col gap-4 border-l border-neutral-200 ml-2">
                     <MobileNavLink
-                      href="/wellness-retreat"
+                      href="/wellness-retreat/"
                       label="Wellness Retreat"
                       isSub
                       onClick={() => setIsOpen(false)}
                     />
                     <MobileNavLink
-                      href="/destination-weddings"
+                      href="/destination-weddings/"
                       label="Destination Weddings"
                       isSub
                       onClick={() => setIsOpen(false)}
                     />
                     <MobileNavLink
-                      href="/corporate-events"
+                      href="/corporate-events/"
                       label="Corporate Events"
                       isSub
                       onClick={() => setIsOpen(false)}
                     />
                     <MobileNavLink
-                      href="/farm-tourism"
+                      href="/farm-tourism/"
                       label="Farm Tourism"
                       isSub
                       onClick={() => setIsOpen(false)}
                     />
                     <MobileNavLink
-                      href="/special-occasions"
+                      href="/special-occasions/"
                       label="Special Occasions"
                       isSub
                       onClick={() => setIsOpen(false)}
@@ -242,13 +240,13 @@ export default function Navbar() {
                 </div>
 
                 <MobileNavLink
-                  href="/blogs"
+                  href="/blogs/"
                   label="Blog"
                   onClick={() => setIsOpen(false)}
                 />
 
                 <MobileNavLink
-                  href="/contact"
+                  href="/contact/"
                   label="Contact"
                   onClick={() => setIsOpen(false)}
                 />
