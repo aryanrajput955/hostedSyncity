@@ -1,4 +1,4 @@
-﻿import ClientContent from './ClientContent';
+import ClientContent from './ClientContent';
 
 export const metadata = {
   title: "Destination Weddings in Uttarakhand - Syncity Events",
@@ -6,7 +6,7 @@ export const metadata = {
   openGraph: {
     title: "Destination Weddings in Uttarakhand - Syncity Events",
     description: "Plan your dream destination wedding in the Himalayas. Luxury venues, eco-friendly practices, and flawless execution in Uttarakhand.",
-    url: "https://syncityevents.com/destination-weddings",
+    url: "https://www.syncityevents.com/destination-weddings/",
     type: "website",
     locale: "en_IN",
     siteName: "Syncity Events",

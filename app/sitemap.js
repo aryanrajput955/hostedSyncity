@@ -1,75 +1,75 @@
 export default function sitemap() {
-  const baseUrl = "https://syncityevents.com";
+  const baseUrl = "https://www.syncityevents.com";
 
   const staticPages = [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/about/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services`,
+      url: `${baseUrl}/services/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/destination-weddings`,
+      url: `${baseUrl}/destination-weddings/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/services/corporate-events`,
+      url: `${baseUrl}/corporate-events/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/services/farm-tourism`,
+      url: `${baseUrl}/farm-tourism/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/services/wellness-retreat`,
+      url: `${baseUrl}/wellness-retreat/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/services/special-occasions`,
+      url: `${baseUrl}/special-occasions/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/contact/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/blogs`,
+      url: `${baseUrl}/blogs/`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/site-map`,
+      url: `${baseUrl}/site-map/`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/privacy-policy`,
+      url: `${baseUrl}/privacy-policy/`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,

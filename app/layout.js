@@ -102,7 +102,7 @@ export default function RootLayout({ children }) {
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "Customer Service",
-                telephone: "+91-8433023265",
+                telephone: "+91 84330 23265",
                 email: "connect@syncityevents.com"
               },
               address: {
@@ -113,38 +113,6 @@ export default function RootLayout({ children }) {
                 postalCode: "249407",
                 addressCountry: "IN"
               }
-            })
-          }}
-        />
-
-        {/* BreadcrumbList Schema */}
-        <Script
-          id="breadcrumb-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://www.syncityevents.com"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Services",
-                  item: "https://www.syncityevents.com/services"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Contact",
-                  item: "https://www.syncityevents.com/contact"
-                }
-              ]
             })
           }}
         />

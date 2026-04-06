@@ -1,4 +1,4 @@
-﻿import ClientContent from './ClientContent';
+import ClientContent from './ClientContent';
 
 export const metadata = {
   title: "Corporate Events & Retreats in Uttarakhand - Syncity Events",
@@ -6,7 +6,7 @@ export const metadata = {
   openGraph: {
     title: "Corporate Events & Retreats in Uttarakhand - Syncity Events",
     description: "Professional corporate events, team building, conferences, and executive retreats in Uttarakhand. Stress relief programs and strategic offsite planning.",
-    url: "https://syncityevents.com/corporate-events",
+    url: "https://www.syncityevents.com/corporate-events/",
     type: "website",
     locale: "en_IN",
     siteName: "Syncity Events",

@@ -1,4 +1,4 @@
-﻿import ClientContent from './ClientContent';
+import ClientContent from './ClientContent';
 
 export const metadata = {
   title: "Special Occasions & Birthday Parties in Uttarakhand - Syncity Events",
@@ -6,7 +6,7 @@ export const metadata = {
   openGraph: {
     title: "Special Occasions & Birthday Parties in Uttarakhand - Syncity Events",
     description: "Celebrate life's special moments with themed decorations, entertainment, catering, and return gifts. Perfect venue for birthdays and family gatherings.",
-    url: "https://syncityevents.com/special-occasions",
+    url: "https://www.syncityevents.com/special-occasions/",
     type: "website",
     locale: "en_IN",
     siteName: "Syncity Events",
