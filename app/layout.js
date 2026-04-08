@@ -91,27 +91,18 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://www.syncityevents.com/#organization",
               name: "Syncity Events",
-              url: "https://www.syncityevents.com",
+              url: "https://www.syncityevents.com/",
               logo: "https://www.syncityevents.com/logo.jpg",
-              description: "Premium event planning services for weddings, corporate events, and retreats in Uttarakhand",
+              description: "Premier event planning and styling in the heart of Devbhoomi. We curate timeless celebrations with uncompromising excellence.",
               sameAs: [
-                "https://www.instagram.com/syncityevents",
-               
+                "https://www.instagram.com/syncityevents/"
               ],
               contactPoint: {
                 "@type": "ContactPoint",
-                contactType: "Customer Service",
-                telephone: "+91 84330 23265",
+                contactType: "customer support",
                 email: "connect@syncityevents.com"
-              },
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "Near Gali No.12, Saubhagyavati Bhav, Tehri Visthapit Bhel, Tehri Visthapit Colony, Subhash Nagar, Haridwar",
-                addressLocality: "Uttarakhand",
-                addressRegion: "UK",
-                postalCode: "249407",
-                addressCountry: "IN"
               }
             })
           }}
