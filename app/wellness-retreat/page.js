@@ -1,11 +1,11 @@
 import ClientContent from './ClientContent';
 
 export const metadata = {
-  title: "Wellness Retreats in Uttarakhand - Yoga, Meditation & Ayurveda - Syncity Events",
-  description: "Rejuvenate at our wellness retreats in the Himalayas. Yoga, meditation, Ayurvedic spa, and holistic healing programs for mind, body, and soul.",
+  title: "Wellness Retreats | Healing Resort | Syncity Events Uttarakhand",
+  description: "Discover the best wellness retreats and healing resorts across Uttarakhand. We curate sustainable, restorative journeys in the heart of the Himalayas.",
   openGraph: {
-    title: "Wellness Retreats in Uttarakhand - Yoga, Meditation & Ayurveda - Syncity Events",
-    description: "Rejuvenate at our wellness retreats in the Himalayas. Yoga, meditation, Ayurvedic spa, and holistic healing programs for mind, body, and soul.",
+    title: "Wellness Retreats | Healing Resort | Syncity Events Uttarakhand",
+    description: "Discover the best wellness retreats and healing resorts across Uttarakhand. We curate sustainable, restorative journeys in the heart of the Himalayas.",
     url: "https://www.syncityevents.com/wellness-retreat/",
     type: "website",
     locale: "en_IN",
@@ -13,8 +13,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wellness Retreats in Uttarakhand - Yoga, Meditation & Ayurveda - Syncity Events",
-    description: "Rejuvenate at our wellness retreats in the Himalayas. Yoga, meditation, Ayurvedic spa, and holistic healing programs for mind, body, and soul.",
+    title: "Wellness Retreats | Healing Resort | Syncity Events Uttarakhand",
+    description: "Discover the best wellness retreats and healing resorts across Uttarakhand. We curate sustainable, restorative journeys in the heart of the Himalayas.",
   },
 };
 

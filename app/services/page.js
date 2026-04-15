@@ -1,11 +1,11 @@
 ﻿import ClientContent from './ClientContent';
 
 export const metadata = {
-  title: "Services - Syncity Events - Weddings, Corporate Events, Wellness Retreats",
-  description: "Explore our premium event services: destination weddings, corporate events, wellness retreats, farm tourism, and special occasions in Uttarakhand.",
+  title: "Wedding & Event Planning Services | Syncity Events Uttarakhand",
+  description: "Experience zero waste luxury with Syncity Events. From eco friendly wedding planning to professional corporate event services, we bring your vision to life across Uttarakhand.",
   openGraph: {
-    title: "Services - Syncity Events - Weddings, Corporate Events, Wellness Retreats",
-    description: "Explore our premium event services: destination weddings, corporate events, wellness retreats, farm tourism, and special occasions in Uttarakhand.",
+    title: "Wedding & Event Planning Services | Syncity Events Uttarakhand",
+    description: "Experience zero waste luxury with Syncity Events. From eco friendly wedding planning to professional corporate event services, we bring your vision to life across Uttarakhand.",
     url: "https://syncityevents.com/services",
     type: "website",
     locale: "en_IN",
@@ -13,8 +13,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services - Syncity Events - Weddings, Corporate Events, Wellness Retreats",
-    description: "Explore our premium event services: destination weddings, corporate events, wellness retreats, farm tourism, and special occasions in Uttarakhand.",
+    title: "Wedding & Event Planning Services | Syncity Events Uttarakhand",
+    description: "Experience zero waste luxury with Syncity Events. From eco friendly wedding planning to professional corporate event services, we bring your vision to life across Uttarakhand.",
   },
 };
 

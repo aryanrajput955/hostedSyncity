@@ -12,9 +12,9 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 // ✅ SEO Metadata
 export const metadata = {
   metadataBase: new URL("https://www.syncityevents.com"),
-  title: "SyncityEvents - Corporate Meetings, Weddings & Retreats in Uttarakhand",
+  title: "Wedding & Corporate Event Planner | Syncity Events Uttarakhand",
   description:
-    "SyncityEvents organizes corporate meetings, destination weddings, stress relief retreats, venues, and everything related to events in Uttarakhand. We make your events stress-free and memorable.",
+    "Premier event planner in Uttarakhand for sustainable luxury. We specialize in destination wedding locations and corporate retreats across the majestic Himalayas.",
   keywords: [
     "SyncityEvents",
     "Event Management Uttarakhand",
@@ -48,9 +48,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "SyncityEvents - Event Management in Uttarakhand",
+    title: "Wedding & Corporate Event Planner | Syncity Events Uttarakhand",
     description:
-      "We specialize in corporate meetings, destination weddings, stress relief retreats, and premium event planning in Uttarakhand.",
+      "Premier event planner in Uttarakhand for sustainable luxury. We specialize in destination wedding locations and corporate retreats across the majestic Himalayas.",
     url: "https://www.syncityevents.com",
     siteName: "SyncityEvents",
     images: [
@@ -66,9 +66,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SyncityEvents - Corporate Meetings, Weddings & Retreats in Uttarakhand",
+    title: "Wedding & Corporate Event Planner | Syncity Events Uttarakhand",
     description:
-      "Your one-stop destination for event management in Uttarakhand. Corporate events, weddings, retreats & more.",
+      "Premier event planner in Uttarakhand for sustainable luxury. We specialize in destination wedding locations and corporate retreats across the majestic Himalayas.",
     images: ["/hamper.png"], // 🔄 Replace with your image
   },
   metadataBase: new URL("https://www.syncityevents.com"),

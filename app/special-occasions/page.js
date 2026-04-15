@@ -1,11 +1,11 @@
 import ClientContent from './ClientContent';
 
 export const metadata = {
-  title: "Special Occasions & Birthday Parties in Uttarakhand - Syncity Events",
-  description: "Celebrate life's special moments with themed decorations, entertainment, catering, and return gifts. Perfect venue for birthdays and family gatherings.",
+  title: "Birthday & Special Occasion Planner | Syncity Events Uttarakhand",
+  description: "Celebrate life’s milestones with the best special occasion planner in Uttarakhand. From luxury birthdays to private anniversaries, we curate unforgettable events.",
   openGraph: {
-    title: "Special Occasions & Birthday Parties in Uttarakhand - Syncity Events",
-    description: "Celebrate life's special moments with themed decorations, entertainment, catering, and return gifts. Perfect venue for birthdays and family gatherings.",
+    title: "Birthday & Special Occasion Planner | Syncity Events Uttarakhand",
+    description: "Celebrate life’s milestones with the best special occasion planner in Uttarakhand. From luxury birthdays to private anniversaries, we curate unforgettable events.",
     url: "https://www.syncityevents.com/special-occasions/",
     type: "website",
     locale: "en_IN",
@@ -13,8 +13,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Special Occasions & Birthday Parties in Uttarakhand - Syncity Events",
-    description: "Celebrate life's special moments with themed decorations, entertainment, catering, and return gifts. Perfect venue for birthdays and family gatherings.",
+    title: "Birthday & Special Occasion Planner | Syncity Events Uttarakhand",
+    description: "Celebrate life’s milestones with the best special occasion planner in Uttarakhand. From luxury birthdays to private anniversaries, we curate unforgettable events.",
   },
 };
 

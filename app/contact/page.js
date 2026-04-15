@@ -31,7 +31,7 @@ export default function Page() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "EventPlanningBusiness",
+            "@type": "ProfessionalService",
             "@id": "https://www.syncityevents.com/#localbusiness",
             name: "Syncity Events",
             url: "https://www.syncityevents.com/",

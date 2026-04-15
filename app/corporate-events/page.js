@@ -1,11 +1,11 @@
 import ClientContent from './ClientContent';
 
 export const metadata = {
-  title: "Corporate Events & Retreats in Uttarakhand - Syncity Events",
-  description: "Professional corporate events, team building, conferences, and executive retreats in Uttarakhand. Stress relief programs and strategic offsite planning.",
+  title: "Corporate Event Planner & Retreats | Syncity Events Uttarakhand",
+  description: "Top corporate event planner in Uttarakhand. We specialize in executive retreats, team building, and conferences across Mussoorie and Rishikesh with a focus on sustainability.",
   openGraph: {
-    title: "Corporate Events & Retreats in Uttarakhand - Syncity Events",
-    description: "Professional corporate events, team building, conferences, and executive retreats in Uttarakhand. Stress relief programs and strategic offsite planning.",
+    title: "Corporate Event Planner & Retreats | Syncity Events Uttarakhand",
+    description: "Top corporate event planner in Uttarakhand. We specialize in executive retreats, team building, and conferences across Mussoorie and Rishikesh with a focus on sustainability.",
     url: "https://www.syncityevents.com/corporate-events/",
     type: "website",
     locale: "en_IN",
@@ -13,8 +13,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Corporate Events & Retreats in Uttarakhand - Syncity Events",
-    description: "Professional corporate events, team building, conferences, and executive retreats in Uttarakhand. Stress relief programs and strategic offsite planning.",
+    title: "Corporate Event Planner & Retreats | Syncity Events Uttarakhand",
+    description: "Top corporate event planner in Uttarakhand. We specialize in executive retreats, team building, and conferences across Mussoorie and Rishikesh with a focus on sustainability.",
   },
 };
 
