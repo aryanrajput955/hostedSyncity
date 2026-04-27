@@ -1,4 +1,4 @@
-﻿import ClientContent from './ClientContent';
+import ClientContent from './ClientContent';
 
 export const metadata = {
   title: "Destination Wedding Planner & Venues | Syncity Events Uttarakhand",

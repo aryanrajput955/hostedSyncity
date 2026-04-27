@@ -16,8 +16,13 @@ export default function Footer() {
     const fetchBlogs = async () => {
       try {
         const baseUrl = (process.env.NEXT_PUBLIC_API_URL || "").replace(/\/$/, "");
-        const url = `${baseUrl}/api/blogs`;
+        const url = baseUrl ? `${baseUrl}/api/blogs` : "/api/blogs";
         const response = await fetch(url);
+        
+        if (!response.ok) {
+          throw new Error(`API error: ${response.status} ${response.statusText}`);
+        }
+        
         const data = await response.json();
         if (data.success) {
           // Show up to 3 blogs, or all if less than 3
