@@ -21,13 +21,13 @@ export async function generateMetadata({ params }) {
             title: blog.metaTitle || blog.title,
             description: blog.metaDescription,
             alternates: {
-                canonical: `https://www.syncityevents.com/blogs/${blog.slug}`,
+                canonical: `https://www.syncityevents.com/blogs/${blog.slug}/`,
             },
             openGraph: {
                 title: blog.metaTitle || blog.title,
                 description: blog.metaDescription,
                 images: [blog.image],
-                url: `https://www.syncityevents.com/blogs/${blog.slug}`,
+                url: `https://www.syncityevents.com/blogs/${blog.slug}/`,
             },
         };
     } catch (error) {

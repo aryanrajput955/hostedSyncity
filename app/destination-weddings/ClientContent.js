@@ -55,6 +55,21 @@ function AccordionItem({ title, children, isOpen, onClick }) {
 export default function ClientContent() {
     const [isVisible, setIsVisible] = useState({});
     const [openFaq, setOpenFaq] = useState(0);
+    const [currentBgIndex, setCurrentBgIndex] = useState(0);
+
+    const backgroundImages = [
+        "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy4_uca7qn.webp",
+        "https://res.cloudinary.com/dhlvq35cc/image/upload/v1773124331/global-wedding_t031jt.jpg",
+        "https://res.cloudinary.com/dhlvq35cc/image/upload/v1777717547/pexels-thevisionaryvows-33914530_sfre0i.jpg",
+        "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772979149/aloha_a8hjaz.webp"
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentBgIndex((prev) => (prev + 1) % backgroundImages.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -149,11 +164,7 @@ export default function ClientContent() {
                                 Plan Your Wedding
                             </Button>
                         </Link>
-                        <Link href="/contact">
-                            <Button variant="secondary" className="w-full sm:w-auto">
-                                Get Consultation
-                            </Button>
-                        </Link>
+
                     </div>
                 </div>
             </section>
@@ -186,7 +197,7 @@ export default function ClientContent() {
                     <div className="text-center mb-16">
                         <Badge className="mb-4">Why Choose Uttarakhand</Badge>
                         <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">Why Choose Uttarakhand for Destination Weddings</h2>
-                        <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto font-light">
+                        <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto font-light leading-relaxed">
                             Uttarakhand stands out as one of the most preferred locations for a destination wedding in India. The region offers a rare combination of natural grandeur, spiritual significance, and modern infrastructure.
                         </p>
                     </div>
@@ -217,11 +228,29 @@ export default function ClientContent() {
             </section>
 
             {/* Planning Services */}
-            <section id="services" className="py-24 px-6 bg-white">
-                <div className="max-w-7xl mx-auto">
+            <section id="services" className="py-32 px-6 relative overflow-hidden group">
+                {/* Animated Background Slideshow */}
+                {backgroundImages.map((img, idx) => (
+                    <div
+                        key={idx}
+                        className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
+                            currentBgIndex === idx ? 'opacity-100' : 'opacity-0'
+                        }`}
+                    >
+                        <CloudinaryImage
+                            src={img}
+                            alt="Wedding Planning Backdrop"
+                            fill
+                            className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[10000ms]"
+                        />
+                        <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+                    </div>
+                ))}
+
+                <div className="max-w-7xl mx-auto relative z-10">
                     <div className="text-center mb-16">
-                        <Badge className="mb-4">Our Services</Badge>
-                        <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">Destination Wedding Planning Services</h2>
+                        <Badge className="mb-4 border-primary/20 bg-white/50">Our Services</Badge>
+                        <h2 className="text-3xl md:text-6xl font-serif text-primary mb-8 drop-shadow-sm">Destination Wedding Planning Services</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -232,7 +261,7 @@ export default function ClientContent() {
                             { title: "Guest and Hospitality Management", desc: "Managing guests in a destination setting requires precise logistics. We take charge of accommodation bookings, airport transfers, and local transportation. Our hospitality desk ensures that every guest feels welcomed and well-attended throughout the festivities.", icon: Users },
                             { title: "Logistics and Execution", desc: "The terrain in hill stations requires expert handling. We manage the complex logistics of transporting decor materials, sound equipment, and supplies across Uttarakhand. Our on-ground team monitors every minute of the event to handle unforeseen challenges instantly.", icon: Zap }
                         ].map((service, idx) => (
-                            <div key={idx} className="p-8 border border-neutral-100 rounded-2xl hover:shadow-lg transition-all duration-300">
+                            <div key={idx} className="p-8 bg-white/80 backdrop-blur-md border border-white/50 rounded-2xl shadow-xl hover:bg-white transition-all duration-300">
                                 <div className="text-primary mb-6"><service.icon size={32} strokeWidth={1.5} /></div>
                                 <h3 className="text-2xl font-serif text-primary mb-4">{service.title}</h3>
                                 <p className="text-neutral-600 font-light leading-relaxed">{service.desc}</p>
@@ -303,17 +332,17 @@ export default function ClientContent() {
                             { 
                                 title: "Destination Wedding in Rishikesh", 
                                 desc: "Known for its spiritual energy and the flowing Ganges, a destination wedding in Rishikesh is perfect for couples seeking a serene, riverside ceremony. The city offers a mix of luxury hotels and \"beach-style\" phera locations that are unique to this region.",
-                                img: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772978311/f7_pysj70.jpg"
+                                img: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772979149/aloha_a8hjaz.webp"
                             },
                             { 
                                 title: "Destination Wedding in Mussoorie", 
                                 desc: "Known as the Queen of Hills, a destination wedding in Mussoorie provides an old-world charm combined with panoramic Himalayan views. It is the ideal location for those who want a cool climate and sophisticated, colonial-style luxury resorts.",
-                                img: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy8_riiah7.jpg"
+                                img: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1773124331/global-wedding_t031jt.jpg"
                             },
                             { 
                                 title: "Destination Wedding in Dehradun", 
                                 desc: "A destination wedding in Dehradun offers the best of both worlds—the beauty of the foothills and the convenience of a capital city. It features some of the largest destination wedding resorts in the state, making it the top choice for high-capacity weddings.",
-                                img: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971420/stress_xgu5yd.jpg"
+                                img: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy4_uca7qn.webp"
                             }
                         ].map((loc, idx) => (
                             <div key={idx} className="group relative rounded-2xl overflow-hidden shadow-lg h-[350px] md:h-[450px]">
@@ -347,7 +376,7 @@ export default function ClientContent() {
                         </div>
                         <div className={`relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl transition-all duration-1000 ${isVisible['venues'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                             <CloudinaryImage
-                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968096/sy8_riiah7.jpg"
+                                src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1777717547/pexels-thevisionaryvows-33914530_sfre0i.jpg"
                                 alt="Wedding Resort"
                                 fill
                                 className="object-cover"
@@ -446,8 +475,14 @@ export default function ClientContent() {
             </section>
 
             {/* Footer CTA */}
-            <section id="footer-cta" className="py-24 px-6 bg-primary relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
+            <section id="footer-cta" className="py-32 px-6 relative overflow-hidden group">
+                <CloudinaryImage
+                    src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1777720077/ChatGPT_Image_May_2_2026_04_35_43_PM_neakeh.png"
+                    alt="Wedding Planning Background"
+                    fill
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40"></div>
                 <div className="max-w-4xl mx-auto text-center relative z-10">
                     <h2 className="text-4xl md:text-6xl font-serif text-white mb-8">Start Planning Your Destination Wedding</h2>
                     <p className="text-xl text-white/80 font-light leading-relaxed mb-12">
@@ -459,11 +494,7 @@ export default function ClientContent() {
                                 Contact Us
                             </Button>
                         </Link>
-                        <Link href="/contact">
-                            <Button variant="secondary" className="px-12">
-                                Book Consultation
-                            </Button>
-                        </Link>
+
                     </div>
                     <p className="mt-12 text-white/50 text-sm italic font-light">
                         You can also explore our event decor and styling services to ensure your wedding setup aligns with your theme and overall visual experience.

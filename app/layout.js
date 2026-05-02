@@ -4,7 +4,8 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
-import ClientWrapper from "./components/clientwrapper"; // 👈 new client component
+import ClientWrapper from "./components/clientwrapper";
+import SmoothScroll from "./components/SmoothScroll";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
@@ -35,7 +36,7 @@ export const metadata = {
     address: true,
   },
   alternates: {
-    canonical: 'https://www.syncityevents.com',
+    canonical: 'https://www.syncityevents.com/',
   },
   robots: {
     index: true,
@@ -51,7 +52,7 @@ export const metadata = {
     title: "Wedding & Corporate Event Planner | Syncity Events Uttarakhand",
     description:
       "Premier event planner in Uttarakhand for sustainable luxury. We specialize in destination wedding locations and corporate retreats across the majestic Himalayas.",
-    url: "https://www.syncityevents.com",
+    url: "https://www.syncityevents.com/",
     siteName: "SyncityEvents",
     images: [
       {
@@ -126,9 +127,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <ClientWrapper>
-          <Navbar />
-          {children}
-          <Footer />
+          <SmoothScroll>
+            <Navbar />
+            {children}
+            <Footer />
+          </SmoothScroll>
         </ClientWrapper>
       </body>
     </html>

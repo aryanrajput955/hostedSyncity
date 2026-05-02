@@ -10,7 +10,7 @@ export const metadata = {
     address: true,
   },
   alternates: {
-    canonical: 'https://www.syncityevents.com/contact',
+    canonical: 'https://www.syncityevents.com/contact/',
   },
   robots: {
     index: true,

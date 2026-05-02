@@ -54,11 +54,11 @@ export default function PortraitVideoSection() {
 
   return (
     <section className="relative py-20 md:py-32 bg-primary overflow-hidden">
-      {/* Cinematic Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#5e0000] to-black/40 opacity-90"></div>
+      {/* Base Color Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#5e0000] to-black/60"></div>
 
-      {/* Texture Overlay */}
-      <div className="absolute inset-0 opacity-10 bg-[url('https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971373/bg2_op6hig.png')] bg-repeat mix-blend-overlay"></div>
+      {/* Floating Image (On Top) */}
+      <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dhlvq35cc/image/upload/v1777720079/ChatGPT_Image_May_2_2026_04_37_14_PM-Photoroom_oredwc.png')] bg-cover bg-center opacity-30"></div>
 
       {/* Floating Particles */}
       <div className="absolute inset-0 z-0 pointer-events-none">

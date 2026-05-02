@@ -10,7 +10,7 @@ export const metadata = {
     address: true,
   },
   alternates: {
-    canonical: 'https://www.syncityevents.com/farm-tourism',
+    canonical: 'https://www.syncityevents.com/farm-tourism/',
   },
   robots: {
     index: true,

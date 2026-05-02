@@ -17,9 +17,9 @@ export default function CTASection() {
   return (
     <section ref={ref} className="relative py-24 md:py-32 overflow-hidden bg-primary">
       {/* Background Elements */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-80">
         <CloudinaryImage
-          src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971372/bg3_phy7xs.jpg"
+          src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1777722406/ChatGPT_Image_May_2_2026_05_16_15_PM_kec00q.png"
           alt="Luxury event and wedding planning background in Uttarakhand"
           fill
           priority={false}

@@ -6,6 +6,6 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://syncityevents.com/sitemap.xml",
+    sitemap: "https://www.syncityevents.com/sitemap.xml",
   };
 }

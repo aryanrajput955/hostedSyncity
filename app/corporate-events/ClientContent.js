@@ -55,6 +55,21 @@ function AccordionItem({ title, children, isOpen, onClick }) {
 export default function ClientContent() {
     const [isVisible, setIsVisible] = useState({});
     const [openFaq, setOpenFaq] = useState(0);
+    const [currentBgIndex, setCurrentBgIndex] = useState(0);
+
+    const backgroundImages = [
+        "https://res.cloudinary.com/dhlvq35cc/image/upload/v1777716823/sy4_x43qie.jpg",
+        "https://res.cloudinary.com/dhlvq35cc/image/upload/v1777716823/sy1_lfsnlb.jpg",
+        "https://res.cloudinary.com/dhlvq35cc/image/upload/v1777716822/c1_qkbqlk.jpg",
+        "https://res.cloudinary.com/dhlvq35cc/image/upload/v1777716821/sy3_hlbxf8.jpg"
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentBgIndex((prev) => (prev + 1) % backgroundImages.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -149,11 +164,7 @@ export default function ClientContent() {
                                 Plan Your Event
                             </Button>
                         </Link>
-                        <Link href="/contact">
-                            <Button variant="secondary" className="w-full sm:w-auto">
-                                Get Consultation
-                            </Button>
-                        </Link>
+
                     </div>
                 </div>
             </section>
@@ -253,12 +264,30 @@ export default function ClientContent() {
             </section>
 
             {/* Planning Services */}
-            <section id="services" className="py-24 px-6 bg-white">
-                <div className="max-w-7xl mx-auto">
+            <section id="services" className="py-32 px-6 relative overflow-hidden group">
+                {/* Animated Background Slideshow */}
+                {backgroundImages.map((img, idx) => (
+                    <div
+                        key={idx}
+                        className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
+                            currentBgIndex === idx ? 'opacity-100' : 'opacity-0'
+                        }`}
+                    >
+                        <CloudinaryImage
+                            src={img}
+                            alt="Corporate Planning Backdrop"
+                            fill
+                            className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[10000ms]"
+                        />
+                        <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+                    </div>
+                ))}
+
+                <div className="max-w-7xl mx-auto relative z-10">
                     <div className="text-center mb-16">
-                        <Badge className="mb-4">Our Expertise</Badge>
-                        <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">Corporate Event Planning Services</h2>
-                        <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto font-light">
+                        <Badge className="mb-4 border-primary/20 bg-white/50">Our Expertise</Badge>
+                        <h2 className="text-3xl md:text-6xl font-serif text-primary mb-8 drop-shadow-sm">Corporate Event Planning Services</h2>
+                        <p className="text-lg md:text-2xl text-neutral-900 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-sm">
                             A structured approach is important in corporate event management, ensuring clarity across all stages.
                         </p>
                     </div>
@@ -271,7 +300,7 @@ export default function ClientContent() {
                             { title: "Guest & Hospitality", desc: "Managing accommodation, transportation, and on-site assistance for a structured attendee experience.", icon: Award },
                             { title: "Logistics & Execution", desc: "Timeline management and on-ground supervision to ensure all activities run as planned.", icon: Zap }
                         ].map((service, idx) => (
-                            <div key={idx} className="p-8 border border-neutral-100 rounded-2xl hover:shadow-lg transition-all duration-300">
+                            <div key={idx} className="p-8 bg-white/80 backdrop-blur-md border border-white/50 rounded-2xl shadow-xl hover:bg-white transition-all duration-300">
                                 <div className="text-primary mb-6"><service.icon size={32} strokeWidth={1.5} /></div>
                                 <h3 className="text-2xl font-serif text-primary mb-4">{service.title}</h3>
                                 <p className="text-neutral-600 font-light leading-relaxed">{service.desc}</p>
@@ -380,7 +409,7 @@ export default function ClientContent() {
                             </p>
                         </div>
                         <div className={`order-1 lg:order-2 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl transition-all duration-1000 ${isVisible['experience'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                            <CloudinaryImage src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772978799/team_w5gj3y.png" alt="Event Setup" fill className="object-cover" />
+                            <CloudinaryImage src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772968095/sy9_iyskdz.jpg" alt="Event Setup" fill className="object-cover" />
                         </div>
                     </div>
 
@@ -520,8 +549,14 @@ export default function ClientContent() {
             </section>
 
             {/* Footer CTA */}
-            <section id="footer-cta" className="py-24 px-6 bg-primary relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
+            <section id="footer-cta" className="py-32 px-6 relative overflow-hidden">
+                <CloudinaryImage
+                    src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1777720077/ChatGPT_Image_May_2_2026_04_35_43_PM_neakeh.png"
+                    alt="Corporate Event Planning"
+                    fill
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/50"></div>
                 <div className="max-w-4xl mx-auto text-center relative z-10">
                     <h2 className="text-4xl md:text-6xl font-serif text-white mb-8">Start Planning Your Corporate Event</h2>
                     <p className="text-xl text-white/80 font-light leading-relaxed mb-12">
@@ -531,11 +566,6 @@ export default function ClientContent() {
                         <Link href="/contact">
                             <Button className="!bg-[#E5E4E2] !text-primary hover:!bg-white px-12">
                                 Contact Us
-                            </Button>
-                        </Link>
-                        <Link href="/contact">
-                            <Button variant="secondary" className="px-12">
-                                Book Consultation
                             </Button>
                         </Link>
                     </div>
