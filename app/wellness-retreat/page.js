@@ -3,6 +3,9 @@ import ClientContent from './ClientContent';
 export const metadata = {
   title: "Wellness Retreats | Healing Resort | Syncity Events Uttarakhand",
   description: "Discover the best wellness retreats and healing resorts across Uttarakhand. We curate sustainable, restorative journeys in the heart of the Himalayas.",
+  alternates: {
+    canonical: "https://www.syncityevents.com/wellness-retreat/",
+  },
   openGraph: {
     title: "Wellness Retreats | Healing Resort | Syncity Events Uttarakhand",
     description: "Discover the best wellness retreats and healing resorts across Uttarakhand. We curate sustainable, restorative journeys in the heart of the Himalayas.",

@@ -45,6 +45,7 @@ export default function Navbar() {
               alt="Syncity"
               width={140}
               height={70}
+              sizes="(max-width: 768px) 64px, 104px"
               className="w-16 md:w-26 h-auto object-contain"
               priority
             />
@@ -86,7 +87,7 @@ export default function Navbar() {
             animate={isHovered || isOpen ? "hover" : "rest"}
           >
             <div
-              className={`flex items-center gap-3 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full shadow-sm border border-primary/5 group transition-all duration-300 hover:shadow-md hover:bg-white ${isOpen ? "bg-white shadow-md" : ""
+              className={`flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-sm border border-primary/5 group transition-all duration-300 hover:shadow-md ${isOpen ? "bg-white shadow-md" : ""
                 }`}
             >
               <span className="text-primary font-serif tracking-[0.2em] text-xs font-semibold hidden md:block group-hover:tracking-[0.3em] transition-all duration-500">

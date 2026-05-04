@@ -30,20 +30,38 @@ const extractPublicId = (url) => {
 /**
  * Optimised Cloudinary Image Component
  */
-export const CloudinaryImage = ({ src, alt, width, height, crop = "fill", priority = false, ...props }) => {
+export const CloudinaryImage = ({ 
+  src, 
+  alt, 
+  width, 
+  height, 
+  crop = "fill", 
+  priority = false, 
+  sizes = "100vw", 
+  quality = "auto",
+  format = "auto",
+  ...props 
+}) => {
   const publicId = extractPublicId(src);
   
+  // Use deliveryType fetch if the src is not a Cloudinary URL and extraction failed
+  const isExternal = !src.includes('cloudinary.com') && src.startsWith('http');
+  const deliveryType = isExternal ? "fetch" : "upload";
+
   // Conditionally set width/height only if fill is not present
   const dimensions = props.fill ? {} : { width: width || 800, height: height || 600 };
 
   return (
     <CldImage
       {...dimensions}
-      src={publicId}
+      src={isExternal ? src : publicId}
       alt={alt}
       crop={crop}
-      sizes="100vw"
+      sizes={sizes}
       priority={priority}
+      quality={quality}
+      format={format}
+      deliveryType={deliveryType}
       {...(priority ? { fetchPriority: "high" } : { loading: "lazy" })}
       {...props}
     />
@@ -72,9 +90,13 @@ export const CloudinaryVideo = ({
   const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || 'dhlvq35cc';
 
   // Construct a high-performance auto-optimized URL
-  const videoUrl = src.includes('cloudinary.com') 
-    ? src 
-    : `https://res.cloudinary.com/${cloudName}/video/upload/q_auto,f_auto/${publicId}.mp4`;
+  const videoTransformations = ["q_auto", "f_auto", "vc_auto"];
+  if (width) videoTransformations.push(`w_${width}`);
+  if (height) videoTransformations.push(`h_${height}`);
+  videoTransformations.push("c_fill");
+
+  // Always use transformations for better performance
+  const videoUrl = `https://res.cloudinary.com/${cloudName}/video/upload/${videoTransformations.join(",")}/${publicId}.mp4`;
 
   // Construct poster URL if publicId is available
   const posterUrl = poster 

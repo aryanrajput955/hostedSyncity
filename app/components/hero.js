@@ -7,7 +7,9 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black py-24 md:py-0">
       {/* Background Video */}
       <CloudinaryVideo
-        src="https://res.cloudinary.com/dhlvq35cc/video/upload/v1772971437/vid_ghztet.mp4" // Replace with your actual Cloudinary public ID for the hero video
+        src="https://res.cloudinary.com/dhlvq35cc/video/upload/v1772971437/vid_ghztet.mp4"
+        width="1920"
+        height="1080"
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-90"
         autoPlay
         muted

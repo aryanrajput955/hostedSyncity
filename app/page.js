@@ -1,6 +1,12 @@
 import Script from "next/script";
 import PageContent from './PageContent';
 
+export const metadata = {
+  alternates: {
+    canonical: "https://www.syncityevents.com/",
+  },
+};
+
 export default function Page() {
   return (
     <>

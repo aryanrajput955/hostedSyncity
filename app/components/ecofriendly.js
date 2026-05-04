@@ -48,13 +48,13 @@ const EcoFriendlySection = () => {
       <div className="relative py-20 bg-[var(--royal-maroon)] overflow-hidden">
         {/* Background Pattern/Image Overlay */}
         
-        <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[var(--luxe-gold)]/10 blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-[var(--rich-burgundy)]/40 blur-3xl" />
+        <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[var(--luxe-gold)]/10 blur-xl" />
+        <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-[var(--rich-burgundy)]/40 blur-xl" />
 
         <div className="relative container mx-auto px-4 md:px-8 text-center z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
@@ -80,8 +80,8 @@ const EcoFriendlySection = () => {
           {stats.map(({ icon: Icon, value, suffix, label }, i) => (
             <motion.div
               key={label}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="flex flex-col items-center text-center px-2 gap-1"
@@ -102,8 +102,8 @@ const EcoFriendlySection = () => {
       <div className="py-10 md:py-22 container mx-auto px-4 md:px-16">
         {/* Section label */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
@@ -116,8 +116,8 @@ const EcoFriendlySection = () => {
         <div className="relative">
           {/* Large hero image */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="relative w-full aspect-[3/4] sm:aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden group"
@@ -126,8 +126,8 @@ const EcoFriendlySection = () => {
               src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772976156/image7_tel20a.webp"
               alt="Sustainable Indian Wedding Decor"
               fill
-              priority
-              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              sizes="100vw"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[var(--royal-maroon)]/90 via-[var(--royal-maroon)]/50 to-transparent" />
             
@@ -161,8 +161,8 @@ const EcoFriendlySection = () => {
             ].map((item, i) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
                 className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-[var(--luxe-gold)]/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group/card"
@@ -181,15 +181,15 @@ const EcoFriendlySection = () => {
       {/* ── Visual Feature Section 2: Food Donation ─────────────────────── */}
       <div className="relative py-20 md:py-28 bg-[var(--light-cream)] overflow-hidden">
         {/* Subtle background texture */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[var(--luxe-gold)]/10 blur-[100px]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[var(--luxe-gold)]/10 blur-[40px]" />
 
         <div className="relative container mx-auto px-4 md:px-8 z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
             {/* Left Content */}
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
               className="lg:col-span-5 order-2 lg:order-1"
@@ -238,8 +238,8 @@ const EcoFriendlySection = () => {
 
             {/* Right Image */}
             <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.15 }}
               className="lg:col-span-7 order-1 lg:order-2 relative"
@@ -249,7 +249,8 @@ const EcoFriendlySection = () => {
                   src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772975116/sy15_an2xaw.jpg"
                   alt="Food Distribution to Community"
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--royal-maroon)] via-transparent to-transparent opacity-60" />
 

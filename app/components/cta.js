@@ -23,6 +23,7 @@ export default function CTASection() {
           alt="Luxury event and wedding planning background in Uttarakhand"
           fill
           priority={false}
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-primary/90 mix-blend-multiply"></div>
@@ -33,7 +34,7 @@ export default function CTASection() {
       <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-primary to-transparent z-10"></div>
 
       {/* Animated Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-accent/20 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-accent/20 rounded-full blur-[60px] pointer-events-none"></div>
 
       <div className="container relative z-20 mx-auto px-6 text-center">
         <motion.div
@@ -44,7 +45,7 @@ export default function CTASection() {
           className="max-w-4xl mx-auto space-y-8"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#E5E4E2]/30 bg-[#E5E4E2]/10 backdrop-blur-sm mx-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#E5E4E2]/30 bg-[#E5E4E2]/20 mx-auto">
             <Star className="w-4 h-4 text-[#E5E4E2] fill-[#E5E4E2]" />
             <span className="text-[#E5E4E2] text-sm font-medium tracking-widest uppercase">
               Start Your Journey

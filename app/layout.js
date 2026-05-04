@@ -35,9 +35,7 @@ export const metadata = {
     telephone: true,
     address: true,
   },
-  alternates: {
-    canonical: 'https://www.syncityevents.com/',
-  },
+  // Individual pages will define their own canonical to avoid Google mismatches
   robots: {
     index: true,
     follow: true,

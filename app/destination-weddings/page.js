@@ -3,6 +3,9 @@ import ClientContent from './ClientContent';
 export const metadata = {
   title: "Destination Wedding Planner & Venues | Syncity Events Uttarakhand",
   description: "Plan your dream destination wedding in Uttarakhand. From luxury resorts in Mussoorie to riverside venues in Rishikesh, we offer sustainable wedding packages across Dehradun.",
+  alternates: {
+    canonical: "https://www.syncityevents.com/destination-weddings/",
+  },
   openGraph: {
     title: "Destination Wedding Planner & Venues | Syncity Events Uttarakhand",
     description: "Plan your dream destination wedding in Uttarakhand. From luxury resorts in Mussoorie to riverside venues in Rishikesh, we offer sustainable wedding packages across Dehradun.",

@@ -3,6 +3,9 @@ import ClientContent from './ClientContent';
 export const metadata = {
   title: "Corporate Event Planner & Retreats | Syncity Events Uttarakhand",
   description: "Top corporate event planner in Uttarakhand. We specialize in executive retreats, team building, and conferences across Mussoorie and Rishikesh with a focus on sustainability.",
+  alternates: {
+    canonical: "https://www.syncityevents.com/corporate-events/",
+  },
   openGraph: {
     title: "Corporate Event Planner & Retreats | Syncity Events Uttarakhand",
     description: "Top corporate event planner in Uttarakhand. We specialize in executive retreats, team building, and conferences across Mussoorie and Rishikesh with a focus on sustainability.",

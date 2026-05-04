@@ -3,6 +3,9 @@ import ClientContent from './ClientContent';
 export const metadata = {
   title: "Farm Tourism & Eco Stays | Syncity Events Uttarakhand",
   description: "Experience authentic farm tourism in Uttarakhand. Syncity Events offers sustainable rural retreats, organic farm stays, and cultural experiences in the heart of the Himalayas.",
+  alternates: {
+    canonical: "https://www.syncityevents.com/farm-tourism/",
+  },
   openGraph: {
     title: "Farm Tourism & Eco Stays | Syncity Events Uttarakhand",
     description: "Experience authentic farm tourism in Uttarakhand. Syncity Events offers sustainable rural retreats, organic farm stays, and cultural experiences in the heart of the Himalayas.",

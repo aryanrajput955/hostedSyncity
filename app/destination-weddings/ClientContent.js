@@ -185,7 +185,7 @@ export default function ClientContent() {
                             From the initial venue scouting to the final execution on your big day, we manage every technical and aesthetic detail to ensure your celebration is exactly as you imagined.
                         </p>
                         <p className="text-primary/70 italic">
-                            For multi-day celebrations with large guest groups, similar planning approaches are also used in corporate events, especially for handling accommodation and coordinated logistics.
+                            For multi-day celebrations with large guest groups, similar planning approaches are also used in <Link href="/corporate-events/" className="text-primary font-medium underline">corporate events</Link>, especially for handling accommodation and coordinated logistics.
                         </p>
                     </div>
                 </div>
@@ -371,7 +371,7 @@ export default function ClientContent() {
                                 Uttarakhand is home to some of the finest hospitality brands in the world. We have established partnerships with top destination wedding resorts to offer you priority bookings and managed services. From heritage properties to contemporary glass-fronted resorts, we help you find a space that resonates with your vision.
                             </p>
                             <p className="text-primary/70 italic text-sm">
-                                Venues with open landscapes and natural surroundings are also preferred in farm tourism experiences, especially for outdoor wedding functions and relaxed celebration setups.
+                                Venues with open landscapes and natural surroundings are also preferred in <Link href="/farm-tourism/" className="text-primary font-medium underline">farm tourism</Link> experiences, especially for outdoor wedding functions and relaxed celebration setups.
                             </p>
                         </div>
                         <div className={`relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl transition-all duration-1000 ${isVisible['venues'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>

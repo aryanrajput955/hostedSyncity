@@ -14,7 +14,7 @@ export default function CombinedSections() {
           src="https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971373/bg2_op6hig.png"
           alt="Luxury wedding background texture Uttarakhand"
           fill
-          priority={true}
+          sizes="100vw"
           className="object-cover opacity-15"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/25 via-background/15 to-accent/30"></div>
@@ -41,8 +41,8 @@ export function WhyWeStartedSection() {
             className="space-y-8 lg:order-2"
           >
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
               className="space-y-6"
@@ -80,11 +80,11 @@ export function WhyWeStartedSection() {
 
             {/* Quote Block */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
-              className="relative p-8 bg-white/70 backdrop-blur-sm border border-accent/30"
+              className="relative p-8 bg-white/80 border border-accent/30 shadow-sm"
             >
               <div className="absolute top-4 left-4 text-6xl text-accent/30 font-serif">"</div>
               <blockquote className="text-primary text-lg font-medium italic ml-8">
@@ -135,7 +135,7 @@ export function WhyWeStartedSection() {
                 alt="Syncity Events wedding planning process in Uttarakhand"
                 width={800}
                 height={800}
-                priority={true}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="rounded-none w-full h-[20rem] md:h-[30rem] lg:h-[40rem] shadow-2xl object-cover"
               />
            
@@ -208,19 +208,20 @@ export function ServicesPreviewSection() {
           {services.map((service, index) => (
             <Link key={index} href={service.link || "#"} className="block">
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 onMouseEnter={() => setActiveService(index)}
-                className="group relative h-[500px] bg-white shadow-xl hover:shadow-2xl transition-all duration-500 rounded-none overflow-hidden cursor-pointer"
+                className="group relative h-[500px] bg-white shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-none overflow-hidden cursor-pointer"
               >
                 {/* Background Image */}
                 <CloudinaryImage
                   src={service.image}
                   alt={`Syncity Events ${service.title} in Uttarakhand`}
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-opacity duration-1000"
                 />
 
                 {/* Gradient Overlay - Always visible for text readability */}

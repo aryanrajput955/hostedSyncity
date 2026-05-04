@@ -182,7 +182,7 @@ export default function ClientContent() {
                             Uttarakhand has become a preferred destination for corporate events due to its mix of natural locations and accessible venues. From business hotels to resort-based setups, the region supports different event formats. As a corporate event planner in Uttarakhand, Syncity Events focuses on structured planning and execution across all stages.
                         </p>
                         <p className="text-primary/70 italic">
-                            For companies planning large-scale or multi-day events, similar venue planning and coordination is also used in destination wedding planning services, especially when managing guest stays and venue logistics across locations.
+                            For companies planning large-scale or multi-day events, similar venue planning and coordination is also used in <Link href="/destination-weddings/" className="text-primary font-medium underline">destination wedding</Link> planning services, especially when managing guest stays and venue logistics across locations.
                         </p>
                     </div>
                 </div>
@@ -218,7 +218,7 @@ export default function ClientContent() {
 
                     <div className="mt-16 p-8 bg-primary/5 rounded-2xl border border-primary/10 text-center">
                         <p className="text-neutral-700 font-light leading-relaxed">
-                            For teams focusing on relaxation and productivity, similar environments are also used in wellness retreats, where calm locations support better engagement and focus.
+                            For teams focusing on relaxation and productivity, similar environments are also used in <Link href="/wellness-retreat/" className="text-primary font-medium underline">wellness retreats</Link>, where calm locations support better engagement and focus.
                         </p>
                     </div>
                 </div>
@@ -356,10 +356,15 @@ export default function ClientContent() {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <Badge className="mb-4">Destination Guide</Badge>
-                        <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">Top Corporate Event Locations</h2>
-                        <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto font-light leading-relaxed">
-                            Uttarakhand includes several locations that support different types of corporate event formats, from formal meetings to offsite retreats.
-                        </p>
+                        <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">Top Corporate Event Locations in Uttarakhand</h2>
+                        <div className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto font-light leading-relaxed space-y-4">
+                            <p>
+                                Uttarakhand includes several locations that are commonly used for corporate events due to their accessibility and range of venue options. Each location supports different types of corporate event formats, from formal meetings to offsite retreats and team engagement activities. 
+                            </p>
+                            <p className="text-primary/70 italic">
+                                Locations with open spaces and natural surroundings are also preferred in <Link href="/farm-tourism/" className="text-primary font-medium underline">farm tourism</Link> experiences, especially for informal team activities and outdoor sessions.
+                            </p>
+                        </div>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -377,7 +382,7 @@ export default function ClientContent() {
                             { 
                                 city: "Dehradun", 
                                 desc: "Offers business hotels and conference venues for larger events. Connectivity and infrastructure make it a practical choice.",
-                                img: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1772971420/stress_xgu5yd.jpg"
+                                img: "https://res.cloudinary.com/dhlvq35cc/image/upload/v1777716822/c1_qkbqlk.jpg"
                             }
                         ].map((loc, idx) => (
                             <div key={idx} className="group relative rounded-2xl overflow-hidden shadow-lg h-[350px] md:h-[450px]">
@@ -441,18 +446,23 @@ export default function ClientContent() {
                         </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
                         {[
-                            { title: "Conferences & Seminars", icon: Mic },
-                            { title: "Product Launches", icon: Rocket },
-                            { title: "Team Outings & Offsites", icon: Users },
-                            { title: "Corporate Parties", icon: Calendar }
+                            { title: "Conferences and seminars", icon: Mic },
+                            { title: "Product launches", icon: Rocket },
+                            { title: "Team outings and offsites", icon: Users },
+                            { title: "Corporate parties and gatherings", icon: Calendar }
                         ].map((type, idx) => (
                             <div key={idx} className="bg-white/5 border border-white/10 p-8 rounded-2xl text-center hover:bg-white/10 transition-colors">
                                 <div className="text-[#E5E4E2] flex justify-center mb-6"><type.icon size={40} strokeWidth={1} /></div>
                                 <h3 className="text-xl font-serif">{type.title}</h3>
                             </div>
                         ))}
+                    </div>
+                    <div className="text-center max-w-3xl mx-auto">
+                        <p className="text-white/80 font-light leading-relaxed italic">
+                            Each event type requires a different level of planning and coordination. A corporate event organizer adjusts execution based on objectives, audience size, and overall event format to ensure smooth delivery.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -486,31 +496,31 @@ export default function ClientContent() {
                         <Badge className="mb-4">Workflow</Badge>
                         <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Our Corporate Event Planning Process</h2>
                         <p className="text-neutral-600 max-w-2xl mx-auto font-light">
-                            A structured process to ensure smooth execution and coordination across all stages.
+                            Corporate event planning follows a structured process to ensure smooth execution and coordination across all stages. Each step is defined to maintain clarity and avoid delays.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
                         {[
                             { 
                                 step: "01", 
-                                title: "Consultation", 
-                                desc: "Understand requirements, objectives, and audience size to set clear direction." 
+                                title: "Consultation to understand requirements", 
+                                desc: "Event objectives, audience size, and overall expectations are discussed to set a clear direction." 
                             },
                             { 
                                 step: "02", 
-                                title: "Planning & Setup", 
-                                desc: "Finalize venue selection, layout planning, and resource allocation based on goals." 
+                                title: "Planning and setup based on event goals", 
+                                desc: "Venue selection, layout planning, and resource allocation are finalized based on the event format." 
                             },
                             { 
                                 step: "03", 
-                                title: "Coordination", 
-                                desc: "Align catering, AV, technical teams, and guest arrangements for smooth operations." 
+                                title: "Vendor coordination and logistics management", 
+                                desc: "Catering, AV, technical teams, and guest arrangements are aligned to ensure smooth operations." 
                             },
                             { 
                                 step: "04", 
-                                title: "Execution", 
-                                desc: "Supervise all activities, monitor timelines, and handle issues efficiently on-ground." 
+                                title: "On-ground execution and monitoring", 
+                                desc: "All activities are supervised to ensure timelines are followed and issues are handled efficiently." 
                             }
                         ].map((item, idx) => (
                             <div key={idx} className="relative group">
@@ -521,6 +531,11 @@ export default function ClientContent() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                    <div className="text-center mt-12">
+                        <p className="text-neutral-600 font-light italic">
+                            This process helps ensure that corporate event organisation is managed in a structured and efficient way.
+                        </p>
                     </div>
                 </div>
             </section>

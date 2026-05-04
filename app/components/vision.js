@@ -40,6 +40,7 @@ export default function OurVisionSection() {
                 width={600}
                 height={800}
                 priority={false}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover w-full h-[500px]"
               />
             </div>
@@ -59,9 +60,9 @@ export default function OurVisionSection() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             viewport={{ once: true }}
             className="space-y-6"
           >

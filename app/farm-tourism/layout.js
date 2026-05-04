@@ -1,28 +1,6 @@
 import Script from 'next/script';
 
-export const metadata = {
-  authors: [{ name: "Syncity Events" }],
-  creator: "Syncity Events",
-  publisher: "Syncity Events",
-  formatDetection: {
-    email: true,
-    telephone: true,
-    address: true,
-  },
-  alternates: {
-    canonical: 'https://www.syncityevents.com/farm-tourism/',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-    },
-  },
-};
+
 
 export default function FarmTourismLayout({ children }) {
   return (
@@ -39,19 +17,19 @@ export default function FarmTourismLayout({ children }) {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://www.syncityevents.com"
+                item: "https://www.syncityevents.com/"
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "Services",
-                item: "https://www.syncityevents.com/services"
+                item: "https://www.syncityevents.com/services/"
               },
               {
                 "@type": "ListItem",
                 position: 3,
                 name: "Farm Tourism",
-                item: "https://www.syncityevents.com/farm-tourism"
+                item: "https://www.syncityevents.com/farm-tourism/"
               }
             ]
           })

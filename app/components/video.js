@@ -9,7 +9,7 @@ import { CloudinaryVideo } from "./CloudinaryMedia";
 // Video data
 const videos = [
   {
-    src: "https://res.cloudinary.com/dhlvq35cc/video/upload/v1772971434/6_ikweeb.mp4", // Replace with your actual Cloudinary public IDs
+    src: "https://res.cloudinary.com/dhlvq35cc/video/upload/v1777909058/WhatsApp_Video_2026-05-04_at_6.06.09_PM_qkuleo.mp4", // Replace with your actual Cloudinary public IDs
     alt: "Wedding Ceremony Highlight"
   },
   {
@@ -21,7 +21,7 @@ const videos = [
     alt: "Cultural Celebration"
   },
   {
-    src: "https://res.cloudinary.com/dhlvq35cc/video/upload/v1772971434/4_ehtklp.mp4",
+    src: "https://res.cloudinary.com/dhlvq35cc/video/upload/v1777909038/WhatsApp_Video_2026-05-04_at_6.06.19_PM_n3gkjn.mp4",
     alt: "Farm Tourism"
   }
 ];
@@ -57,9 +57,6 @@ export default function PortraitVideoSection() {
       {/* Base Color Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#5e0000] to-black/60"></div>
 
-      {/* Floating Image (On Top) */}
-      <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dhlvq35cc/image/upload/v1777720079/ChatGPT_Image_May_2_2026_04_37_14_PM-Photoroom_oredwc.png')] bg-cover bg-center opacity-30"></div>
-
       {/* Floating Particles */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/20 rounded-full animate-pulse"></div>
@@ -81,15 +78,17 @@ export default function PortraitVideoSection() {
             <span className="text-[#E5E4E2] text-xs font-medium tracking-[0.2em] uppercase">Captured Moments</span>
           </motion.div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-light text-white"
+            className="mb-16"
           >
-            Witness the <span className="font-serif italic text-[#E5E4E2]">Magic</span>
-          </motion.h2>
+            <h2 className="text-4xl md:text-6xl font-light text-white">
+              Witness the <span className="font-serif italic text-[#E5E4E2]">Magic</span>
+            </h2>
+          </motion.div>
 
           <motion.div
             initial={{ scaleX: 0 }}
@@ -119,8 +118,8 @@ export default function PortraitVideoSection() {
                   <div className="relative aspect-[9/16] rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl">
                     <CloudinaryVideo
                       src={video.src}
-                      width="1080"
-                      height="1920"
+                      width="480"
+                      height="854"
                       className="w-full h-full object-cover"
                       autoPlay
                       muted
@@ -138,8 +137,8 @@ export default function PortraitVideoSection() {
             {videos.map((video, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="group relative"
@@ -152,8 +151,8 @@ export default function PortraitVideoSection() {
 
                   <CloudinaryVideo
                     src={video.src}
-                    width="1080"
-                    height="1920"
+                    width="400"
+                    height="711"
                     className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700"
                     autoPlay
                     muted

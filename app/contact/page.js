@@ -5,11 +5,14 @@ export const metadata = {
   title: "Contact Us | Syncity Events",
   description:
     "Get in touch with Syncity Events for destination weddings, corporate events, wellness retreats, farm tourism, and special occasions in Haridwar, Uttarakhand.",
+  alternates: {
+    canonical: "https://www.syncityevents.com/contact/",
+  },
   openGraph: {
     title: "Contact Us | Syncity Events",
     description:
       "Get in touch with Syncity Events for destination weddings, corporate events, wellness retreats, farm tourism, and special occasions in Haridwar, Uttarakhand.",
-    url: "https://syncityevents.com/contact",
+    url: "https://www.syncityevents.com/contact/",
     type: "website",
     locale: "en_IN",
     siteName: "Syncity Events",
